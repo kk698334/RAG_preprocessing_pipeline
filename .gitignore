@@ -2,3 +2,6 @@
 __pycache__/
 raw_documents/
 .vscode/
+*.json
+*.html
+*.txt
