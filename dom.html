@@ -1,0 +1,2911 @@
+<html lang="ko"><head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta property="og:title" content="국민재난안전포털">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://www.safekorea.go.kr/idsiSFK/common/light/img/front/safekoreaDomain.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="#">
+<meta property="fb:app_id" content="1539376542750650">
+<title>자료실</title>
+<link href="/idsiSFK/neo/ext/css/common.css" type="text/css" rel="stylesheet">
+<link rel="shortcut icon" href="/idsiSFK/favicon.ico">	
+<link href="/idsiSFK/neo/ext/css/jquery-ui.css" rel="stylesheet" type="text/css">
+<!-- <link rel="stylesheet" type="text/css" href="/idsiSFK/neo/ext/css/front.min.css"/> -->
+<link href="/idsiSFK/neo/ext/css/layout.css" rel="stylesheet" type="text/css">
+<!-- <link href="/idsiSFK/neo/ext/css/dp_sub.css" rel="stylesheet" type="text/css"/> -->
+<link href="/idsiSFK/neo/ext/css/dp_sub.min.css" rel="stylesheet" type="text/css">
+<!-- <link href="/idsiSFK/neo/ext/css/gnbfooter.css" rel="stylesheet" type="text/css"/> -->
+
+
+<script src="/idsiSFK/neo/ext/js/jquery-1.11.1.min.js"></script>	
+<script>
+	var timeStamp = new Date();
+	function loadScriptG(url) {
+	    const script = document.createElement('script');
+	    script.type = 'text/javascript';
+	    script.src = url;
+	    script.defer = true;
+	    document.head.appendChild(script);
+	}
+	    
+	loadScriptG('/idsiSFK/neo/ext/js/page/common_header.js?' + timeStamp.getTime());
+</script><script type="text/javascript" src="/idsiSFK/neo/ext/js/page/common_header.js?1774097026476" defer=""></script>
+
+
+<script src="/idsiSFK/neo/ext/js/jquery.bxslider.min.js"></script>	
+<script src="/idsiSFK/neo/ext/js/jquery-ui.min.js"></script><script type="text/javascript" src="/idsiSFK/neo/ext/js/emergency/pro/emergency.pro.js?1774097026585" defer=""></script>
+<script src="/idsiSFK/neo/ext/js/cleave.min.js"></script>
+<!-- <script src="/idsiSFK/neo/ext/js/control.min.js"></script> -->
+<script src="/idsiSFK/neo/ext/js/idsi_val.js"></script>
+<!-- <script src="/idsiSFK/neo/ext/js/idsi_safekorea_comutil.js"></script>	 -->
+<!-- <script src="/idsiSFK/neo/ext/js/neoSafeKoreaEngine.js"></script>	 -->	
+<script src="/idsiSFK/neo/ext/js/idsi_safekorea_common.js"></script>	
+<script src="/idsiSFK/neo/ext/js/idsi_safekorea_comutil.min.js"></script>	
+<script src="/idsiSFK/neo/ext/js/neoSafeKoreaEngine.min.js"></script>	
+<script src="/idsiSFK/neo/ext/js/neoMessageUtil.js"></script>	
+<!-- <script src="/idsiSFK/neo/ext/js/kakao.min.js"></script> -->
+
+<script>
+      $(function(){
+         $('#datepicker').datepicker();
+      })
+      
+   $(function() {
+       //input을 datepicker로 선언
+       $("#datepicker1,#datepicker2").datepicker({
+           dateFormat: 'yy-mm-dd' //달력 날짜 형태
+           ,showOtherMonths: true //빈 공간에 현재월의 앞뒤월의 날짜를 표시
+           ,showMonthAfterYear:true // 월- 년 순서가아닌 년도 - 월 순서
+           ,changeYear: true //option값 년 선택 가능
+           ,changeMonth: true //option값  월 선택 가능                
+           ,showOn: "both" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시  
+           ,buttonImage: "/idsiSFK/neo/ext/img/icon_calendar.gif" //버튼 이미지 경로
+           ,buttonImageOnly: true //버튼 이미지만 깔끔하게 보이게함
+           ,buttonText: "선택" //버튼 호버 텍스트              
+           ,yearSuffix: " - " //달력의 년도 부분 뒤 텍스트
+       	   ,monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'] //달력의  부분 텍스트
+           ,monthNames: ['1','2','3','4','5','6','7','8','9','10','11','12'] //달력의  부분 Tooltip
+           ,dayNamesMin: ['일','월','화','수','목','금','토'] //달력의 요일 텍스트
+           ,dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'] //달력의 요일 Tooltip
+//            ,minDate: "-7D" //최소 선택일자(-1D:하루전, -1M:한달전, -1Y:일년전)
+//            ,maxDate: "+0D" //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후) 
+       });                    
+       
+       //초기값을 오늘 날짜로 설정해줘야 합니다.
+       $('#datepicker1').datepicker('setDate', '-7D'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)            
+       $('#datepicker2').datepicker('setDate', 'today'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)            
+   });
+</script>
+
+
+<script>
+	var menuDataList = [];
+	
+	var d = new Date();
+	var year = d.getFullYear();
+	var month = ((d.getMonth() + 1) > 10 ? (d.getMonth() + 1) : "0" + (d.getMonth() + 1));
+	var date = d.getDate() > 10 ? d.getDate() : "0" + d.getDate();
+	var hour = d.getHours() > 10 ? d.getHours() : "0" + d.getHours();
+	var minute = d.getMinutes() > 10 ? d.getMinutes() : "0" + d.getMinutes();
+	var sid = "" + year + month + date + hour + minute;
+
+	//************************************************
+	// parameters
+	//************************************************
+	var neoSafeKoreaParams = {
+	  menuSeq : "593"
+	, bbs_no : "9"
+	, emgPage : "Y"
+};
+	
+	var neoSafeKoreaHeaderDataMapList = [
+	//****************************************
+	// dm_resultMap
+	//****************************************
+    	{
+			id : "dm_resultMap",
+			data : {
+				  resultCode  : ""
+				, resultMsg   : ""
+				, totCnt      : ""
+				, pageSize    : ""
+				, redirectUrl : ""
+			}
+		}
+	]
+
+	$(function(){
+		safeKoreaEngineInitializeDataMap(neoSafeKoreaHeaderDataMapList);
+	});
+	
+	//***********************************************************************************************
+	// menu parsing 시작
+	//***********************************************************************************************
+	$(document).ready(function(){
+//		if (window.location.protocol != "https:"){
+//			window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+//		}
+		$.getJSON("/idsiSFK/neo/ext/json/main/menuList.json?sid=" + sid, function(data) {			
+			menuDataList = data;
+			$(".nav .inner").append("<ul class='gnbmenu'></ul>");
+			var i, j = 0, k = 0;
+	
+			for(i = 0; i < menuDataList.length; i++){
+				var menuData = menuDataList[i];
+				
+				if(menuData.MENU_NM == "안내도우미") {				
+					$(".level1_title").html("");
+					navMenuSet();
+					tabMenuSet();
+					setEvent();
+					if(location.href.indexOf("emgPage=Y") != "-1" && (location.href.indexOf("menuSeq=50") != "-1")) {
+						setDisable();
+					}
+					
+					return;
+				}
+				
+				if(menuData.DPTH == "1") {
+					$(".gnbmenu").append("<li class='mn" + (j+1) + "'><a tabindex='0' href='#' role='button' aria-haspopup='true' aria-expanded='false'>" + menuData.MENU_NM + "</a><div class='submenubox'><ul class='submenus'></ul></div></li>");
+								
+					$(".gnbmenu>li").on("mouseover", function() {
+						$('.nav').height('350px');
+						$('.gnbmenu>li').removeClass('active');
+						$(this).addClass('active');
+						$('.menu_home').addClass('op');
+					});
+					
+					$(".nav").on("mouseleave", function() {
+						$('.nav').height('60px');
+						$('.gnbmenu>li').removeClass('active');
+						$('.menu_home').removeClass('op');
+					});
+					
+					$(".gnbmenu>li>a").on("focus", function() {
+						$('.gnbmenu>li').removeClass('active');
+						$(this).parent('li').addClass('active');
+						$(this).next('div').show();
+// 						$(this).parent().nextAll().children('.submenubox').hide();
+						$('.menu_home').addClass('op');
+					});
+					
+					j++;
+				} else if(menuData.DPTH == "2") {
+					if(menuData.MENU_SEQ == "93")
+						$(".mn" + j + " .submenubox .submenus").append("<li class='submn" + j + "_" + (k+1) + "'><a  class='sub_tit' href='#'>" + menuData.MENU_NM + "</a><ul class='subsubmenu v1'></ul></li>");
+					else
+						$(".mn" + j + " .submenubox .submenus").append("<li class='submn" + j + "_" + (k+1) + "'><a  class='sub_tit' href='#'>" + menuData.MENU_NM + "</a><ul class='subsubmenu'></ul></li>");
+					
+					k++;
+				} else if(menuData.DPTH == "3") {
+					var url = "";
+					var split = "";
+					
+					if(menuDataList[i+1].DPTH != "4" || menuDataList[i].MENU_SEQ == "755") {
+						if(menuData.SERVICE_URL.indexOf("?") == "-1")
+							split = "?";
+						else
+							split = "&";
+						
+						url = "/idsiSFK" + menuData.SERVICE_URL + split + "menuSeq=" + menuData.MENU_SEQ;
+					} else {
+						var realMenuData = menuDataList[i+1];
+						
+						if(realMenuData.SERVICE_URL.indexOf("?") == "-1")
+							split = "?";
+						else
+							split = "&";
+						
+						url = "/idsiSFK" + realMenuData.SERVICE_URL + split + "menuSeq=" + realMenuData.MENU_SEQ;
+					}
+					
+					if(menuData.MENU_SEQ == "68"){
+						$(".submn" + j + "_" + k + " .subsubmenu").append("<li><button onclick='menuGo(\"" + url + "\")'>" + menuData.MENU_NM + "</button></li>");
+					} else {
+						$(".submn" + j + "_" + k + " .subsubmenu").append("<li><button onclick='menuGo(\"" + url + "\")'>" + menuData.MENU_NM + "</button></li>");
+					}
+					
+				}
+			}
+		});
+	});
+	
+	function menuGo(url) {
+		
+		//http변환
+		if(url.indexOf('http:') != '-1' || url.indexOf('https:') != '-1'){
+			url = url.replace('/idsiSFK','');
+		}
+		
+		//팝업오픈
+		if(url.indexOf('popup:') != '-1'){
+			var targetUrl = url.replace('popup:','');
+			window.open(targetUrl);
+		}
+		else{
+			location.href = url;
+		}
+	}
+
+	//***********************************************************************************************
+	// navMenuSet 시작
+	//***********************************************************************************************
+	function navMenuSet(){
+		$(".level1_title").html("");
+		
+		var menu1d, menu2d, menu3d;
+		
+		if(593 == "152") {
+			$("#nav_first").text("재난예방대비");
+			$("#nav2depth").text("재난상식");
+			$("#nav3depth").text("재난상식");
+			
+			$(".level1_title").html("재난상식");
+			
+			return;
+		}
+		
+		var thisMenu = menuDataList.filter(function (data) { return data.MENU_SEQ == 593 });
+		
+		if(thisMenu[0].DPTH == "3") {
+			menu3d = thisMenu;
+		} else {
+			menu3d = menuDataList.filter(function (data) { return data.MENU_SEQ == thisMenu[0].PMENU_SEQ });
+		}
+		menu2d = menuDataList.filter(function (data) { return data.MENU_SEQ == menu3d[0].PMENU_SEQ });
+		menu1d = menuDataList.filter(function (data) { return data.MENU_SEQ == menu2d[0].PMENU_SEQ });
+		
+		$("#nav_first").text(menu1d[0].MENU_NM);
+		$("#nav2depth").text(menu2d[0].MENU_NM);
+		$("#nav3depth").text(menu3d[0].MENU_NM);
+				
+		/* 현재 페이지의 메뉴명 표시, 여기에서는 3depth메뉴를 넣어주고 4depth(탭)의경우 아래에서 처리한다. */
+		$(".level1_title").html(menu3d[0].MENU_NM);
+		
+		//head 타이틀은 상세 타이틀로 구분
+		if ($('.level1_titleWrap > .level1_title').text() == "자연재난행동요령"
+				|| $('.level1_titleWrap > .level1_title').text() == "사회재난행동요령"
+				|| $('.level1_titleWrap > .level1_title').text() == "생활안전행동요령"
+				|| $('.level1_titleWrap > .level1_title').text() == "비상대비행동요령") {
+		$('head title').text($('.level1_titleWrap > .level1_title ').text() + " " + $('.level2_border_titleWrap > .level2_title').text());
+		} else if( ( $('.level1_titleWrap > .level1_title').length != 0 )  &&  ($('.level2_border_titleWrap > .level2_title').length == 0) && (thisMenu[0].DPTH != 4)){
+			$('head title').text($('.level1_titleWrap > .level1_title').text());
+		} else if(  ( $('.level1_titleWrap > .level1_title').length != 0 )  &&  ($('.level2_border_titleWrap > .level2_title').length != 0)  ){
+            $('head title').text($('.level2_border_titleWrap > .level2_title').text());
+		} else if(thisMenu[0].DPTH == 4){
+			$('head title').text(menu3d[0].MENU_NM + " - " + thisMenu[0].MENU_NM);
+		} else {
+			$('head title').text(menu3d[0].MENU_NM);
+		}
+	}
+	//***********************************************************************************************
+	// navMenuSet 끝
+	//***********************************************************************************************
+
+	//***********************************************************************************************
+	// tabMenuSet 시작
+	//***********************************************************************************************
+	function tabMenuSet(){
+		var menu4d, tabCnt = 0;
+		var tabStr = "";
+		
+		if(593 == "152")
+			return;
+		
+		var thisMenu = menuDataList.filter(function (data) { return data.MENU_SEQ == 593 });
+		
+		if(thisMenu[0].DPTH != "4")
+			return;
+			
+		menu4d = menuDataList.filter(function (data) { return data.PMENU_SEQ == thisMenu[0].PMENU_SEQ });
+		
+		$(".level1_titleWrap").after("<div id='tabContent'></div>");
+		
+		for(var i = 0; i < menu4d.length; i++){
+			tabCnt++;
+			var url = "";
+			var split = ""
+			var menuTarget = "";
+			var selectedTmpString = "";
+			
+			if(menu4d[i].SERVICE_URL.indexOf("?") == "-1")
+				split = "?";
+			else
+				split = "&";
+			
+			url = "/idsiSFK" + menu4d[i].SERVICE_URL + split + "menuSeq=" + menu4d[i].MENU_SEQ;
+			
+			/* 현재메뉴인지 판단 */
+			var selTit = "";
+			if(menu4d[i].MENU_SEQ == thisMenu[0].MENU_SEQ){
+				selectedTmpString = "selected";
+				selTit = '선택됨';
+			}
+			
+			tabStr += "<li><a title='" + selTit + "' tabindex='0' onclick='menuGo(\"" + url + "\")' class='tab_fcBlack_Link " + selectedTmpString + "' outerDiv='false'>" + menu4d[i].MENU_NM + "</a></li>";
+				
+			selectedTmpString = "";
+		}
+				
+		/* for문 종료후 tab이 표시할 tab이 있는지 확인 (tabCnt) */
+		if(tabCnt>1){
+			tabStr = '<ul class="menu' + tabCnt + '_tabWrap" style="">' + tabStr + '</ul>';
+			$("#tabContent").append(tabStr);
+			//tab event 추가
+			$('#tabContent a').on('keydown',function(event) {
+				if (event.keyCode == 13) {
+					$(this).click();
+				}
+			});
+		}
+				
+	}
+	
+	//***********************************************************************************************
+	// sns 처리 시작	
+	//***********************************************************************************************
+	var sns_content;
+	var sns_href;
+	   		
+   	function shareStory() { 
+		Kakao.Story.share({ 
+		   url: sns_href,
+		   //url: 'https://www.safekorea.go.kr/idsiSFK/126/menuMap.do?w2xPath=/idsiSFK/neo/sfk/cs/contents/prevent/prevent02.xml', 
+		   text: sns_content + $('.preventTop_boxWrap').text()
+		});
+	}
+
+   	
+	$(function(){
+		//a태그 버튼에 tabindex 추가 
+		$('body a').attr('tabindex', 0);
+		$('.subTitleMenuName').attr('tabindex', -1);
+		$('body input[type=radio]').attr('tabindex', 0);//radio 버튼에 tabindex 추가
+		
+		//esc 이벤트 추가
+		$('#gnb').on('keydown',function(event) { //gnb 메뉴 이벤트
+			if (event.keyCode == 27) {
+				$('.nav').height('60px');
+				$('.gnbmenu>li').removeClass('active');
+				$('.menu_home').removeClass('op');
+				$('.btn_skip').children().eq(0).focus();
+				$('.submenubox').removeAttr('style');
+			}
+		});
+		
+		//enter 이벤트 추가		
+		$('body a').on('keydown',function(event) { //a태그 이벤트
+			if (event.keyCode == 13) {
+				if($(this).children().length != 0){//a태그에 하위태그가 존재 할 경우
+					$(this).children().eq(0).click();
+				}else{
+					$(this).click();
+				}
+			}
+		});
+		$('body input[type=radio]').on('keydown',function(event) { // radio버튼 이벤트
+			if (event.keyCode == 13) {
+				$(this).click();
+			}
+		});
+		
+		$('body input[type=checkbox]').on('keydown',function(event) { //체크 박스 이벤트
+			if (event.keyCode == 13) {
+				$(this).click();
+			}
+		});
+		
+		$(".btn_skip a").on("focusin", function(e) {
+			$(this).css("top","0");	
+		});
+		$(".btn_skip a").on("focusout", function(e) {
+			$(this).css("top","-40px");	
+		});
+		
+		if($("a[data-toggle='sns_share']").length > 0){
+			//기존에 a태그로 되어있던것 날리고 span 태그로 대체
+			$('.sns_bt').children().remove();
+			var htm = ''
+				htm += '<a data-toggle="sns_share" tabindex="0" data-service="facebook" data-title="페이스북 SNS공유" title="페이스북 SNS공유 새창열기" class = "facebook"></a>';
+				htm += '<a data-toggle="sns_share" tabindex="0" data-service="twitter" data-title="X SNS공유" title="X SNS공유 새창열기" class = "twitter"></a>';
+				htm += '<a data-toggle="sns_share" tabindex="0" data-service="kakaostory" data-title="카카오스토리 SNS공유" title="카카오스토리 SNS공유 새창열기" class = "kakaostory"></a>';
+			$('.sns_bt').append(htm);
+		}
+		
+		$("a[data-toggle='sns_share']").click(function(e){//sns 버튼 클릭 시 처리
+			e.preventDefault();
+			fnOpenSns($(this));
+		});
+		$("a[data-toggle='sns_share']").keydown(function(event){//sns 버튼 클릭 시 처리
+			if (event.keyCode == 13) {
+				event.preventDefault();
+				fnOpenSns($(this));
+			}
+		});
+		//***********************************************************************************************
+		// sns 처리 끝	
+		//***********************************************************************************************
+		/* nav*/
+		$(".navi > li").click(function(){
+			if ( $(this).hasClass("nor") ) {
+				$(".navi > li").children(".subMenu").stop().clearQueue().slideUp(100);
+				$(".navi > li").removeClass("up").addClass("nor");
+				$(this).children(".subMenu").stop().clearQueue().slideDown(200);
+				$(this).removeClass("nor").addClass("up");
+			} else {
+				$(this).children(".subMenu").stop().clearQueue().slideUp(200);
+				$(this).removeClass("up").addClass("nor");
+			}
+		});
+		
+		$(".navi>li").mouseleave(function(){
+			$(this).children(".subMenu").stop().clearQueue().slideUp(100);
+			$(".navi > li").removeClass("up").addClass("nor");
+		});
+
+		/* layer */
+		$('.open_layer').on('click' ,function () {
+			$(this).next().toggle();
+		});
+		$('.close_layer').on('click' ,function () {
+			$(this).parents('.layer').css('display','none');
+		});
+
+		/* scrolltop */
+		$(".scrolltop").click(function(){
+			$("html, body").animate({scrollTop: 0}, 500);
+	 	});
+
+		/* gnb shadow*/
+		$(window).scroll(function() {
+			var scroll = $(window).scrollTop();
+			if (scroll >= 90) {
+				$(".header_top .shadow").css("display","block");
+			} else {
+				$(".header_top .shadow").css("display","none");
+			}
+		});
+		//각content id 부여
+		$('body > .content').attr('id', 'content');
+	
+		//***********************************************************************************************
+		// 초기화 시작	
+		//***********************************************************************************************
+		if(!navigator.userAgent.match(/Tablet|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/)){
+			//태블릿,PC에서만 실행 될 스크립트					
+			//$('meta[name=viewport]').attr('content','width=1090');
+		}
+		if($('.navi > li').length != 0){
+			$('.navi > li').not(':eq(0)').find('a').attr('tabindex',-1);
+		}
+		
+		
+		
+	});
+	//***********************************************************************************************
+	// 초기화 끝	
+	//***********************************************************************************************
+	//sns open
+	function fnOpenSns(_this){
+		var sns_type = _this.attr('data-service');
+		sns_href = document.URL;
+		if( sns_type == 'facebook' ) sns_href = sns_href.replace('https://', 'http://');
+		
+		var title = _this.attr('data-title');
+		var loc = "";
+		
+		//sns공유 내용
+		if( $('.level1_title').text() == '' )
+			sns_content =  '[국민재난안전포털]\n';
+		else if( $('.level2_title').text() == '' )
+			sns_content =  '[국민재난안전포털 : ' + $('.level1_title').text() + ']\n';
+		else
+			sns_content =  '[국민재난안전포털 : ' + $('.level1_title').text() + ' > ' + $('.level2_title').text() + ']\n';
+		
+		
+		//게시글인 경우		
+		if(typeof bbsMap != 'undefined')
+			sns_href = sns_href + '&viewtype=read&bbs_ordr=' + bbsMap.get('bbs_ordr');
+		
+		if( ! sns_type || !sns_href || !title) return;
+		
+		if( sns_type == 'facebook' ) {
+			loc = '//www.facebook.com/sharer/sharer.php?u='+ encodeURIComponent( sns_href );
+		}
+		else if ( sns_type == 'twitter' ) {			
+			loc = '//x.com/intent/post?text='+encodeURIComponent( sns_content ) +'&url='+ encodeURIComponent( sns_href );   
+		}
+		else if ( sns_type == 'google' ) {
+			loc = '//plus.google.com/share?url='+sns_href;
+		}
+		else if ( sns_type == 'kakaostory') {
+			var kakaojs = "/idsiSFK/neo/ext/js/kakao.min.js";
+			$.getScript(kakaojs, function(){
+				Kakao.init('7dec58d7c1768142d3242fa61637c5d7');
+				shareStory();
+				//return;
+			});
+			return;
+		}
+		else {
+			return false;
+		}
+		
+		window.open(loc, '', 'resizable=yes, width=600px, height=400px, top=100px, left=400px');
+		return false;
+	}
+	
+	function fn_layerClose(){ $("#layerbox").hide(); }
+	function fn_layerClose(){ $("#layerbox").hide(); }
+	function fn_layerOpen() { $("#layerbox").show(); }
+	
+	function fn_clickSearch(){
+	 	var url = "/idsiSFK/neo/sfk/cs/csc/searchTotal.jsp?menuSeq=603";
+	 	//var url = "/idsiSFK/603/menuMap.do?w2xPath=/idsiSFK/neo/sfk/cs/csc/searchTotal.xml";
+	 	
+		var iptheadsearchVal = $("#iptheadsearchVal").val();
+		if(iptheadsearchVal==""){
+			alert("검색어를 입력해주세요.");
+			return;
+		}
+		
+		var param = "&searchVal1="+encodeURIComponent(encodeURI(iptheadsearchVal));
+		console.log( url+param);
+		location.href = url+param; 
+	}	
+		 
+	function fn_enterCheck(){
+		if( event.keyCode == 13){
+			fn_clickSearch();
+		}
+	}	
+
+	// 10월13일 수정 -팝업닫기 추가
+	function helpMenuclose() {
+			$("#layerbox").css("display", "none");
+			$("#li_eng > a").focus();
+	}
+	
+	function setEvent(){
+		$('.gnbmenu>li').hover(function(event) {
+			$('.nav').height('350px');
+			$('.gnbmenu>li').removeClass('active');
+			$(this).addClass('active');
+			$('.menu_home').addClass('op');
+		}, function(event) {
+			$('.nav').height('60px');
+			$('.gnbmenu>li').removeClass('active');
+			$('.menu_home').removeClass('op');
+		});
+		$(".gnbmenu>li>a").on("focusin", function(e) {
+			console.log('.gnbmenu>li>a  ::' + e.type);
+			$('.gnbmenu>li').removeClass('active');
+			$(this).parent('li').addClass('active');
+			$(this).next('div').show();
+// 			$(this).parent().nextAll().children('.submenubox').hide();
+			$('.menu_home').addClass('op');
+		});
+		//본문내용으로 포커스가 내려가던가 혹은 풋터로 포커스가 내려갈경우 열려있는 메뉴바를 닫는다.
+/* 		$("#helper").on("focusin", function(e) {
+			$('.nav').height('60px');
+			$('.gnbmenu>li').removeClass('active');
+			$('.menu_home').removeClass('op');
+			$('.submenubox').removeAttr('style');
+		}); */
+		$(".navi_home").on("focusin", function(e) {
+			$('.nav').height('60px');
+			$('.gnbmenu>li').removeClass('active');
+			$('.menu_home').removeClass('op');
+			$('.submenubox').removeAttr('style');
+		});
+		
+		$(".content").on("focusin", function(e) {
+			$('.nav').height('60px');
+			$('.gnbmenu>li').removeClass('active');
+			$('.menu_home').removeClass('op');
+			$('.submenubox').removeAttr('style');
+		});
+		$("#footer_include").on("focusin", function(e) {
+			$('.nav').height('60px');
+			$('.gnbmenu>li').removeClass('active');
+			$('.menu_home').removeClass('op');
+			$('.submenubox').removeAttr('style');
+		});
+		$('.gnbmenu > li > a').on('hover',function(){
+		   $('.gnbmenu > li > a').attr('aria-expanded','false')
+		   $(this).attr('aria-expanded','true');    
+		});
+	}
+	
+	// 앵커 포커싱 이동
+	function focus_anchor(_target){
+		var $target = $(_target);
+		if ($target.length > 0) {
+			$target.attr("tabIndex", -1).focus();
+		}
+	}
+</script>
+<style>
+.submenu li>ul>li>a 
+{
+color:#646472;
+}
+.submenu li>ul>li>button {
+color:#646472;
+}
+.btn_skip{ position: relative}
+.btn_skip a{position: absolute; left: 0; top:-40px; background: #000; color: #fff; padding: 2px 6px; font-size: 12px  }
+</style>
+</head>
+
+<body>
+<!--HEAD-->
+<div class="btn_skip" data-ui="SkipNav">
+	<a title="본문 바로가기" id="goto_content" href="#content" tabindex="0">본문 바로가기</a>
+	<a href="#gnb" tabindex="0">주메뉴바로가기</a>
+</div>
+<div id="header" class="header">
+	<div class="header_logo">
+	<div class="inner" style="position: relative;">
+		<div style="float: left;">
+				<ul class="guide" style="">
+					<li style="float: right; margin: 30px -20px 0px 0;">
+						<a href="https://evaluation.go.kr/p123.jsp" style="vertical-align: text-bottom;" target="_blank" title="국민이 주인인 나라, 함께 행복한 대한민국" tabindex="0"><img style="width: 240px;" alt="국민이 주인인 나라, 함께 행복한 대한민국" src="/idsiSFK/neo/ext/img/go_img1_20260306.png"></a>
+						<a href="https://www.mois.go.kr/frt/sub/popup/p_taegugki_banner/screen.do" target="_blank" title="국가상징국무회의알아보기" tabindex="0"><img alt="국가상징국무회의알아보기" src="/idsiSFK/neo/ext/img/go_img2_221024.png"></a>
+					</li>
+				</ul>
+			</div>
+			<h1>
+			<a title="국민재난안전포털 안전한 나라 행복한 국민" href="/idsiSFK/neo/main/main.html" tabindex="0">
+				<img alt="국민재난안전포털" src="/idsiSFK/neo/ext/img/main/main_logo_img.png" style="margin-top: 20px; ">
+			</a>
+		</h1>
+			<!-- 10월13일 수정 -19콘테츠 선영화 시작 //-->
+			<div style="float: right; display: inline-block;">
+				<ul class="guide" style="">
+					<li style="float: left; margin: 32px 40px 0px 0;">
+						<a href="/idsiSFK/neo/sfk/cs/csc/sitemapSearch.html?menuSeq=343" style="font-size: 12px; color: #2c2c2c;" tabindex="0">사이트맵</a></li>
+					<li style="float: left; margin: 32px 40px 0px 0;">
+						<button id="helper" onclick="" style="font-size: 12px; color:#2c2c2c;" title="안내도우미">안내도우미</button>
+						<div id="layerbox" class="layerbox guidemenubox layer" style="top: 58px; z-index: 5;">
+							<ul class="submenu">
+								<li><a id="subFirstMenu" style="cursor: default;" class="subTitleMenuName" title="재난안전정보" tabindex="-1">재난안전정보</a>
+									<ul class="subsubmenu">
+										<li><a href="/idsiSFK/neo/sfk/cs/csc/bbs_conf.jsp?menuSeq=689&amp;bbs_no=5" title="공지사항 바로가기" tabindex="0">공지사항</a></li>
+										<li><a href="/idsiSFK/neo/sfk/cs/csc/bbs_conf.jsp?menuSeq=693&amp;bbs_no=7" title="자주묻는질문 바로가기" tabindex="0">자주
+												묻는 질문</a></li>
+										<li><a href="/idsiSFK/neo/sfk/cs/csc/bbs_conf.jsp?menuSeq=593&amp;bbs_no=9" title="자료실 바로가기" tabindex="0">자료실</a></li>
+										<li><a href="https://www.law.go.kr" target="_blank" title="법령정보 새창열림" tabindex="0">법령정보</a></li>
+									</ul></li>
+								<li><a style="cursor: default;" class="subTitleMenuName" title="사이트이용안내" tabindex="-1">사이트이용안내</a> 
+									<ul class="subsubmenu">
+										<li><a href="/idsiSFK/neo/sfk/cs/contents/help/SDIJKM7102.html?menuSeq=336" title="개인정보처리방침 바로가기" tabindex="0">개인정보처리방침</a></li>
+										<li><a href="/idsiSFK/neo/sfk/cs/contents/help/SDIJKM7103.html?menuSeq=337" title="웹접근성안내 바로가기" tabindex="0">웹접근성안내</a></li>
+										<li><a href="/idsiSFK/neo/sfk/cs/contents/help/SDIJKM7104.html?menuSeq=338" title="뷰어프로그램 바로가기" tabindex="0">뷰어프로그램</a></li>
+										<li><a href="/idsiSFK/neo/sfk/cs/contents/help/SDIJKM7105.html?menuSeq=339" title="장애인이용안내 바로가기" tabindex="0">장애인이용안내</a></li>
+									</ul></li>
+								<!-- <li><a href="#" onclick="goToSearchPage();return false;" class="subTitleMenuName" >통합검색</a>
+									<ul class="subsubmenu">
+										<li><button onclick="goToSearchPage();return false;">통합검색</button></li>
+									</ul></li> -->
+							</ul>
+							<button onclick="helpMenuclose();" style="border:#ddd 1px solid;background:#eee;padding:3px 5px;margin-top:25px">닫기</button>
+						</div>
+					</li>
+					<li class="li_eng" id="li_eng" style="float: left; margin: 32px 40px 0px 0;">
+						<a href="http://eng.safekorea.go.kr" style="font-size: 12px; color: #2c2c2c;" tabindex="0">ENG</a>
+					</li>
+				</ul>
+			</div>
+	</div></div>
+	<div class="header_top" id="gnb">
+		<div class="nav">
+			<div class="inner">
+			<ul class="gnbmenu"><li class="mn1"><a tabindex="0" href="#" role="button" aria-haspopup="true" aria-expanded="false">재난예방대비</a><div class="submenubox"><ul class="submenus"><li class="submn1_1"><a class="sub_tit" href="#">국민행동요령</a><ul class="subsubmenu"><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/contents/prevent/prevent01.html?menuSeq=126&quot;)">자연재난행동요령</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/contents/prevent/SDIJKM5116_LIST.html?menuSeq=127&quot;)">사회재난행동요령</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/contents/prevent/SDIJKM5138_LIST.html?menuSeq=128&quot;)">생활안전행동요령</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/contents/prevent/SDIJKM5139_LIST.html?menuSeq=125&quot;)">비상대비행동요령</button></li></ul></li><li class="submn1_2"><a class="sub_tit" href="#">준비점검</a><ul class="subsubmenu"><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/contents/prevent/SDIJKM5204_LIST.html?menuSeq=130&quot;)">비상대처요령</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/contents/prevent/SDIJKM5208_LIST.html?menuSeq=131&quot;)">안전수칙</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/contents/prevent/SDIJKM5215.html?menuSeq=379&quot;)">비상대비용품</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/contents/prevent/SDIJKM5230.html?menuSeq=865&quot;)">소방안전 예방요령</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/contents/prevent/SDIJKM5229.html?menuSeq=432&amp;menuSeq=432&quot;)">안전관련단체</button></li></ul></li><li class="submn1_3"><a class="sub_tit" href="#">자율안전점검</a><ul class="subsubmenu"><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/contents/prevent/SDIJKM5301.html?menuSeq=136&quot;)">우리집안전점검</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/contents/prevent/SDIJKM5501_LIST.html?menuSeq=835&quot;)">다중이용시설 안전점검표</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/ppn/dsf/dsfsurveyUsrFrom.html?menuSeq=137&quot;)">재난대비안전점검</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/ppn/lsf/lsfsurveyUsrFrom.html?menuSeq=138&quot;)">생활안전점검</button></li></ul></li><li class="submn1_4"><a class="sub_tit" href="#">어린이놀이시설점검</a><ul class="subsubmenu"><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/contents/prevent/SDIJKM5401.html?menuSeq=139&quot;)">어린이놀이시설 안전 현황</button></li></ul></li><li class="submn1_5"><a class="sub_tit" href="#">재난훈련 및 종사자교육</a><ul class="subsubmenu"><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/ppn/int/TraingInt2016.html?menuSeq=140&quot;)">훈련개요</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/ppn/pln/TrainingSystm2016.html?menuSeq=415&quot;)">훈련계획</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/csc/bbs_conf.jsp?bbs_no=56&amp;emgPage=Y&amp;menuSeq=425&quot;)">훈련자료</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/contents/prevent/TraingInt2025.html?menuSeq=9993&quot;)">종사자교육 개요 및 자료</button></li></ul></li><li class="submn1_6"><a class="sub_tit" href="#">비상연락망</a><ul class="subsubmenu"><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/ppn/emg/SDIJKM5602.html?menuSeq=596&quot;)">자치단체</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/ppn/tel/firsUserList.html?menuSeq=144&quot;)">소방서</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/ppn/tel/policeUserList.html?menuSeq=889&quot;)">경찰서</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/ppn/tel/medicalUserList.html?menuSeq=148&quot;)">일반병원</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/ppn/tel/healthUserList.html?menuSeq=149&quot;)">보건소</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/ppn/tel/drugstoreUserList.html?menuSeq=150&quot;)">약국</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/ppn/tel/bloodUserList.html?menuSeq=151&quot;)">혈액원</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/ppn/tel/emrUserList.html?menuSeq=890&quot;)">응급의료센터</button></li></ul></li></ul></div></li><li class="mn2"><a tabindex="0" href="#" role="button" aria-haspopup="true" aria-expanded="false">민방위</a><div class="submenubox"><ul class="submenus"><li class="submn2_7"><a class="sub_tit" href="#">민방위</a><ul class="subsubmenu"><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/contents/civil_defense/SDIJKM1101.html?menuSeq=345&quot;)">민방위의 정의</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/contents/civil_defense/SDIJKM1106.html?menuSeq=350&quot;)">도입배경</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/contents/civil_defense/SDIJKM1108.html?menuSeq=352&quot;)">운영조직</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/csc/bbs_conf.jsp?bbs_no=10&amp;emgPage=Y&amp;menuSeq=609&quot;)">민방위자료</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/cvi/rec/RecommendSiteList.html?menuSeq=48&quot;)">관련사이트</button></li></ul></li><li class="submn2_8"><a class="sub_tit" href="#">교육ㆍ훈련</a><ul class="subsubmenu"><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/contents/civil_defense/SDIJKM1201.html?menuSeq=358&quot;)">개요</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/contents/civil_defense/SDIJKM1205.jsp?emgPage=Y&amp;menuSeq=50&quot;)">교육일정</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/contents/civil_defense/SDIJKM1250.html?emgPage=Y&amp;menuSeq=618&quot;)">민방위훈련</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/cvi/cvc/cilcontactList.jsp?emgPage=Y&amp;menuSeq=51&quot;)">담당부서 연락처</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/cvi/lec/lecintro.html?menuSeq=326&quot;)">교육자료</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/contents/civil_defense/SDIJKM12533.html?menuSeq=9995&quot;)">자율참여형 민방위 교육</button></li></ul></li><li class="submn2_9"><a class="sub_tit" href="#">민방위 경보</a><ul class="subsubmenu"><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/contents/civil_defense/SDIJKM1301.html?menuSeq=53&quot;)">신호방법</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/contents/civil_defense/SDIJKM1303.html?menuSeq=55&quot;)">실제발생사례</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/contents/civil_defense/SDIJKM1304.html?menuSeq=868&quot;)">건축물 민방위 경보전파</button></li></ul></li><li class="submn2_10"><a class="sub_tit" href="#">민방위 시설</a><ul class="subsubmenu"><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/contents/civil_defense/SDIJKM1401.html?menuSeq=56&quot;)">비상급수시설</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/contents/civil_defense/SDIJKM1402.html?menuSeq=57&quot;)">대피시설</button></li></ul></li><li class="submn2_11"><a class="sub_tit" href="#">민방위대 장비</a><ul class="subsubmenu"><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/contents/civil_defense/SDIJKM1501.html?menuSeq=58&quot;)">민방위 장비</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/contents/civil_defense/SDIJKM1601.html?menuSeq=879&quot;)">화생방 장비</button></li></ul></li></ul></div></li><li class="mn3"><a tabindex="0" href="#" role="button" aria-haspopup="true" aria-expanded="false">풍수해·시민안전보험</a><div class="submenubox"><ul class="submenus"><li class="submn3_12"><a class="sub_tit" href="#">풍수해·지진재해보험</a><ul class="subsubmenu"><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/contents/insurance/SDIJKM2101.html?menuSeq=303&quot;)">풍수해·지진재해보험이란</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/contents/insurance/SDIJKM2109.html?menuSeq=66&quot;)">보험사 및 가입안내</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/contents/insurance/SDIJKM2202.html?menuSeq=67&quot;)">풍수해·지진재해보험금 청구절차</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/csc/bbs_conf.jsp?bbs_no=2&amp;emgPage=Y&amp;menuSeq=68&quot;)">풍수해·지진재해보험금 지급사례</button></li></ul></li><li class="submn3_13"><a class="sub_tit" href="#">뉴스·자료</a><ul class="subsubmenu"><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/csc/bbs_conf.jsp?bbs_no=4&amp;emgPage=Y&amp;menuSeq=626&quot;)">풍수해·지진재해보험 자료</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/csc/bbs_conf.jsp?bbs_no=6&amp;emgPage=Y&amp;menuSeq=627&quot;)">풍수해·지진재해보험 공지</button></li></ul></li><li class="submn3_14"><a class="sub_tit" href="#">고객의서비스</a><ul class="subsubmenu"><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/contents/insurance/SDIJKM2401.html?menuSeq=629&quot;)">고객의소리</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/csc/bbs_conf.jsp?bbs_no=21&amp;emgPage=Y&amp;menuSeq=630&quot;)">풍수해·지진재해보험 자주묻는질문</button></li></ul></li><li class="submn3_15"><a class="sub_tit" href="#">시민안전보험</a><ul class="subsubmenu"><li><button onclick="menuGo(&quot;/idsiSFKpopup:https://www.ins24.go.kr/safeInsrnc/intro/view.do?menuSeq=840&quot;)">시민안전보험 소개</button></li><li><button onclick="menuGo(&quot;/idsiSFKpopup:https://www.ins24.go.kr/safeInsrnc/search/list.do?menuSeq=841&quot;)">시민안전보험 조회</button></li></ul></li></ul></div></li><li class="mn4"><a tabindex="0" href="#" role="button" aria-haspopup="true" aria-expanded="false">재난심리상담</a><div class="submenubox"><ul class="submenus"><li class="submn4_16"><a class="sub_tit" href="#">심리회복지원마당</a><ul class="subsubmenu"><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/pcm/spo/MsfrtnTrlSportRetrieve.html?menuSeq=556&quot;)">심리회복지원 소개</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/csc/bbs_conf.jsp?bbs_no=24&amp;emgPage=Y&amp;menuSeq=562&quot;)">사진자료</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/csc/bbs_conf.jsp?bbs_no=35&amp;emgPage=Y&amp;menuSeq=564&quot;)">영상자료</button></li></ul></li><li class="submn4_17"><a class="sub_tit" href="#">심리회복지원센터</a><ul class="subsubmenu"><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/pcm/ctr/CnterIntrcnList.html?menuSeq=560&quot;)">센터소개</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/csc/bbs_conf.jsp?bbs_no=16&amp;emgPage=Y&amp;menuSeq=561&quot;)">센터소식</button></li></ul></li><li class="submn4_18"><a class="sub_tit" href="#">자가진단</a><ul class="subsubmenu"><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/csc/bbs_conf.jsp?bbs_no=14&amp;emgPage=Y&amp;menuSeq=557&quot;)">증상 및 대처법</button></li><li><button onclick="menuGo(&quot;/idsiSFKpopup:https://www.redcross.or.kr/recovery/cl/cnslrAplyPage.do?insTy=cns&amp;menuSeq=880&quot;)">재난심리상담 신청</button></li></ul></li></ul></div></li><li class="mn5"><a tabindex="0" href="#" role="button" aria-haspopup="true" aria-expanded="false">재난현황</a><div class="submenubox"><ul class="submenus"><li class="submn5_19"><a class="sub_tit" href="#">재난사고발생</a><ul class="subsubmenu"><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/sfc/acd/dstdUserList.html?emgPage=Y&amp;menuSeq=96&quot;)">풍수해</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/sfc/acd/redtideUserList.html?menuSeq=97&quot;)">적조</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/sfc/acd/frfireUserList.html?menuSeq=98&quot;)">산불</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/sfc/dis/disasterNewsList.jsp?menuSeq=619&quot;)">재난ㆍ안전뉴스</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/sfc/dis/disasterMsgList.jsp?emgPage=Y&amp;menuSeq=679&quot;)">재난문자</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/sfc/acd/cdcDcdUserList.html?menuSeq=649&quot;)">감염병</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/sfc/acd/animalUserList.html?menuSeq=650&quot;)">가축질병</button></li></ul></li><li class="submn5_20"><a class="sub_tit" href="#">안전사고경보</a><ul class="subsubmenu"><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/csc/bbs_conf.jsp?bbs_no=74&amp;emgPage=Y&amp;menuSeq=101&quot;)">안전사고 주의보</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/sfc/wka/wekyclmy.html?menuSeq=102&quot;)">안전사고일지</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/csc/bbs_conf.jsp?bbs_no=71&amp;emgPage=Y&amp;menuSeq=849&quot;)">공모전</button></li></ul></li><li class="submn5_21"><a class="sub_tit" href="#">지역상황</a><ul class="subsubmenu v1"><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/sfc/wet/wthmnUserList.html?menuSeq=307&quot;)">기상정보</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/sfc/rnf/rnfllUserList.html?menuSeq=301&quot;)">강우량과수위</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/sfc/res/victimList.html?acmdfclty_cd=2&amp;emgPage=Y&amp;menuSeq=855&quot;)">지진대피장소</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/sfc/cas/chmstryAcdntShltrList.html?menuSeq=871&quot;)">화학사고 대피장소</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/sfc/res/victimList.html?acmdfclty_cd=1&amp;emgPage=Y&amp;menuSeq=858&quot;)">임시주거시설</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/sfc/fcl/riskUserList.html?menuSeq=314&quot;)">위험지역</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/sfc/htw/htweaiList.html?menuSeq=862&quot;)">쉼터</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/csc/bbs_conf.jsp?bbs_no=61&amp;emgPage=Y&amp;menuSeq=685&quot;)">가뭄 예·경보</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/sfc/mke/findDustList.html?menuSeq=788&quot;)">미세먼지</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/sfc/fcl/traficInfoList.html?menuSeq=881&quot;)">교통정보</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/sfc/fcl/fireInfoList.html?menuSeq=883&quot;)">소방정보</button></li></ul></li><li class="submn5_22"><a class="sub_tit" href="#">재난통계</a><ul class="subsubmenu"><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/csc/bbs_conf.jsp?bbs_no=28&amp;emgPage=Y&amp;menuSeq=734&quot;)">통계자료실</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/csc/bbs_conf.jsp?bbs_no=26&amp;emgPage=Y&amp;menuSeq=735&quot;)">재해연보</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/csc/bbs_conf.jsp?bbs_no=27&amp;emgPage=Y&amp;menuSeq=736&quot;)">재난연감</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/sfc/tot/toteaiList.html?emgPage=Y&amp;menuSeq=886&quot;)">자연재난상황통계</button></li><li><button onclick="menuGo(&quot;/idsiSFKpopup:https://ndsm.kostat.go.kr/ndsm/srv/?menuSeq=887&quot;)">자연재해통계지도</button></li></ul></li></ul></div></li><li class="mn6"><a tabindex="0" href="#" role="button" aria-haspopup="true" aria-expanded="false">참여와 신고</a><div class="submenubox"><ul class="submenus"><li class="submn6_23"><a class="sub_tit" href="#">국민참여</a><ul class="subsubmenu"><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/pan/arb/arbUserForm.jsp?menuSeq=872&quot;)">안전감찰 익명제보센터</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/pan/cdr/cdreaiBefore.html?menuSeq=157&quot;)">사유재산피해신고</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/pan/rbn/rbnLogin.jsp?menuSeq=159&quot;)">복구진도 등록</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/pan/cid/unCaseInit.html?menuSeq=755&quot;)">국민 성금 내역 공개</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/pan/pop/SDIJKM6104.html?menuSeq=160&quot;)">안전신고포털</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/pan/qus/qusUsrList.jsp?menuSeq=161&quot;)">설문조사</button></li><li><button onclick="menuGo(&quot;/idsiSFK/neo/sfk/cs/contents/insurance/qna_board.html?menuSeq=745&quot;)">Q&amp;A</button></li></ul></li></ul></div></li></ul></div>
+		</div>
+	</div>		
+</div>
+<div id="nav">
+	<div class="naviWrap" id="gpnaviWrap">
+		<div class="naviInWrap">
+			<ul class="navi">
+				<li class="navi_list">
+					<a class="navi_home" href="/idsiSFK/neo/index.jsp" tabindex="0"><span class="home_imgSet_icon"><i class="ir">home 바로가기</i></span>
+					</a>
+				</li>
+				<li class="navi_list">
+					<span class="navi_link navi_first" id="nav_first" tabindex="-1">안내도우미</span>
+				</li>
+				<li class="navi_list nor">
+					<a class="navi_link" tabindex="-1">
+						<span id="nav2depth">재난안전정보</span>
+						<i class="arrow_imgSet_location imgSet"></i>
+					</a>
+				</li>
+				<li class="navi_list nor">
+					<a class="navi_link navi_last" tabindex="-1">
+						<span id="nav3depth">자료실</span>
+						<i class="arrow_imgSet_location imgSet"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<script>
+var elementHelper = document.getElementById('helper');
+elementHelper.addEventListener('click', function () {
+	debugger;
+	if ($("#layerbox").css("display") == "block"){
+		$("#layerbox").css("display", "none");
+	} else if ($("#layerbox").css("display") == "none"){
+		$("#layerbox").css("display", "block");
+		$('#subFirstMenu').focus();
+		console.log('$("#subFirstMenu").focus();')
+	}
+});
+
+elementHelper.addEventListener('keydown', function (event) {
+	debugger;
+if (event.key === 'Enter' || event.keyCode === 13) { // Enter 키를 누를 때
+	if ($("#layerbox").css("display") == "block"){
+		$("#layerbox").css("display", "none");
+	} else if ($("#layerbox").css("display") == "none"){
+		$("#layerbox").css("display", "block");
+		$('#subFirstMenu').focus();
+		console.log('$("#subFirstMenu").focus();')
+	}
+}
+});
+</script>
+
+<!-- <script src="/idsiSFK/neo/ext/js/cleave/cleave.min.js"></script>	 -->
+<!-- <script src="/idsiSFK/neo/ext/js/idsi_safekorea_comutil.js"></script>	 -->
+<!-- <script src="/idsiSFK/neo/ext/js/idsi_safekorea_common.js"></script>	 -->
+<script src="/idsiSFK/neo/ext/js/page/bbs_conf.js" defer=""></script>
+<script>
+
+//**************************************************************************
+// DataMap
+//**************************************************************************
+var neoSafeKoreaDataMapList = [
+
+		//****************************************
+		// bbs_searchInfo
+		//****************************************
+		{
+			id : "bbs_searchInfo",
+			data : {
+				  pageIndex          : "1"
+				, pageUnit           : "10"
+				, pageSize           : "10"
+				, firstIndex         : "1"
+				, lastIndex          : "1"
+				, recordCountPerPage : "10"
+				, bbs_no             : ""
+				, bbs_ordr           : ""
+				, use                : ""
+				, opCode             : ""
+				, search_type_v      : ""
+				, search_val_v       : ""
+				, search_key_n       : ""
+				, search_notice      : ""
+				, search_use         : ""
+				, search_permits     : ""
+				, search_disaster_a  : ""
+				, search_disaster_b  : ""
+				, search_amendment   : ""
+				, search_start       : ""
+				, search_end         : ""
+			}
+		},
+
+		//****************************************
+		// bbsConfMap
+		//****************************************
+		{
+			id : "bbsConfMap",
+			data : {
+				  bbs_no                  : ""
+				, sj                      : ""
+				, ty_cd                   : ""
+				, cn                      : ""
+				, use_at                  : ""
+				, frst_regist_dt          : ""
+				, last_modf_dt            : ""
+				, frst_register_id        : ""
+				, bbs_new_daycnt          : ""
+				, ck_time_cnt             : ""
+				, file_mg                 : ""
+				, file_co                 : ""
+				, notice_matter_at        : ""
+				, answer_sntnc_use_at     : ""
+				, cmnt_use_at             : ""
+				, scrst_at                : ""
+				, sntnc_list_athr_value   : ""
+				, blts_dtl_qry_athr_value : ""
+				, sntnc_wrt_athr_value    : ""
+				, sntnc_answer_athr_value : ""
+				, answer_sntnc_athr_value : ""
+				, sntnc_rcmdt_athr_value  : ""
+				, dwld_athr_value         : ""
+				, rcmdt_ennc              : ""
+				, atchmnfl_use_ennc       : ""
+				, modf_id                 : ""
+				, delete_at               : ""
+				, pd_search_use_at        : ""
+				, cfm_at                  : ""
+				, site_cd_no              : ""
+				, dstr_ty_use_at          : ""
+				, cmmn_cd_use_at          : ""
+				, cmmn_cd_no              : ""
+				, estb_reform_dy_use_at   : ""
+				, reprsnt_image_use_at    : ""
+				, reprsnt_image_width_lt  : ""
+				, reprsnt_image_vrticl_lt : ""
+				, bbs_list_outpt_cnt      : ""
+				, sj_use_list_cn          : ""
+				, common_nm_v             : ""
+			}
+		}
+];
+
+//**************************************************************************
+// Submission
+//**************************************************************************
+var neoSafeKoreaSubmissionList = [
+
+		//******************************************************************
+		// getBbsConfDtlSelect_submission
+		//******************************************************************
+		{
+			  id         : "getBbsConfDtlSelect_submission"
+			, processMsg : "조회중입니다..."
+			, submitdone : getBbsConfDtlSelect_submitdone
+			, mode       : "asynchronous"
+			, ref        : {"id":"bbs_searchInfo","key":"bbs_searchInfo"}
+			, target     : [{"id":"bbsConfMap","key":"bbsConfMap"}]
+			, action     : "/idsiSFK/bbs/conf/selectBbsConfView.do"
+			, encoding   : "UTF-8"
+			, method     : "post"
+			, mediatype  : "application/json"
+		},
+
+		//******************************************************************
+		// getBbsConfListSelect_submission
+		//******************************************************************
+		{
+			  id         : "getBbsConfListSelect_submission"
+			, processMsg : "조회중입니다..."
+			, mode       : "synchronous"
+			, ref        : {"id":"bbs_searchInfo","key":"bbs_searchInfo"}
+			, target     : [{"id":"bbsConfList","key":"bbsConfList"}]
+			, action     : "/idsiSFK/bbs/conf/selectBbsConfUserList.do"
+			, encoding   : "UTF-8"
+			, method     : "post"
+			, mediatype  : "application/json"
+		}
+];
+
+
+$(function(){
+	safeKoreaEngineInitializeDataMap(neoSafeKoreaDataMapList);
+	safeKoreaEngineInitializeSubmission(neoSafeKoreaSubmissionList);
+});
+
+
+//**************************************************************************
+// 
+//**************************************************************************
+
+	var pageParam = neoSafeKoreaParams;//CommonUtil.getParameters("true",false);
+	
+	$(function(){
+		init();
+		JRSDDEPT(); //소관부서 추가
+	});
+	
+	//초기화 
+	function init() {
+	
+		//게시판 키값 리스트
+		var bbs_no = pageParam.bbs_no;
+		bbs_searchInfo.set("bbs_no", bbs_no);
+
+		if(bbs_no == 19 || bbs_no == 41 || bbs_no == 73) {
+			$("#noticeBox").css("display", "block");
+		}
+		
+	    getBbsConfDtlSelect_submission.exec();
+	}
+	
+	//conf데이터 콜백
+	function getBbsConfDtlSelect_submitdone(e) {	
+
+		var viewtype = pageParam.viewtype;
+		if(viewtype=="read"){
+			bbsDtl(pageParam.bbs_no , pageParam.bbs_ordr )
+			return;
+		}
+		
+		var path ="/idsiSFK/neo/sfk/cs/csc/" + bbsConfMap.get('ty_cd') + "_user_list.jsp";
+		contents.setSrc(path);
+	}
+	
+	//상세 페이지
+	function bbsDtl(bbs_no , bbs_ordr){
+		
+		//wframe 사용으로 bbs_conf_user_list.xml 파일 bbs_searchInfo 사용
+		bbs_searchInfo.set("bbs_no",   bbs_no); //게시판 번호
+		bbs_searchInfo.set("bbs_ordr", bbs_ordr); //게시 내용 번호
+		bbs_searchInfo.set("opCode",   "2" ); // 1번:등록 2번:수정	
+		var path ="/idsiSFK/neo/sfk/cs/csc/" + bbsConfMap.get('ty_cd') + "_user_detail.jsp";
+		contents.setSrc(path);
+		
+	}
+	
+	//게시판 소관부서 테스트 시작
+	
+	//소관부서가 있는 게시판 페이지의 url에 있는 파라미터 값을 받아서 bbs_no의 번호화 비교해서 해당 소관부서를 입력하는 방식
+	//소관부서가 없으면 아무것도 입력되지 않는다.
+	var JRSDDEPTList = {"4" : {"DATA":"재난보험과 (044-205-5353, 5355, 5359)"},
+						"6" : {"DATA":"재난보험과 (044-205-5353, 5355, 5359)"},
+						"21" : {"DATA":"재난보험과 (044-205-5353, 5355, 5359)"},
+						"2" : {"DATA":"재난보험과 (044-205-5353, 5355, 5359)"},
+					   "10" : {"DATA":"민방위과 진지웅 (044-205-4372)"},
+					   "22" : {"DATA":"민방위과 진지웅 (044-205-4372)"},
+					   "11" : {"DATA":"민방위과 진지웅 (044-205-4372)"},
+					   "24" : {"DATA":"재난구호과 고혜지(044-205-5343)"},
+					   "35" : {"DATA":"재난구호과 고혜지(044-205-5343)"},
+					   "16" : {"DATA":"재난구호과 고혜지(044-205-5343)"},
+					   "14" : {"DATA":"재난구호과 고혜지(044-205-5343)"},
+					   "13" : {"DATA":"재난구호과 이시은(044-205-5342)"},
+					   "15" : {"DATA":"재난구호과 이시은(044-205-5342)"},
+					   "74" : {"DATA":"예방안전제도과 오영남 (044-205-4521) "},
+					   "71" : {"DATA":"재난관리정책과 서종민 (044-205-5124)"},
+					   "84" : {"DATA":"재난관리정책과 이수민(044-205-5124)"},
+					   "61" : {"DATA":"기후재난대응과 이태웅 (044-205-6361)"},
+					   "28" : {"DATA":"예방안전제도과 오영남(044-205-4521)"},
+					   "26" : {"DATA":"복구지원과 정형호(044-205-5313)"},
+					   "27" : {"DATA":"사회재난대응총괄과 허윤정(044-205-5265)"},
+// 					   "5" : {"DATA":"재난정보통신과 민근홍(044-205-5308)"},
+// 					   "7" : {"DATA":"재난정보통신과 민근홍(044-205-5308)"},
+					   "8" : {"DATA":"민방위과 진지웅 (044-205-4372)"},
+// 					   "9" : {"DATA":"재난정보통신과 민근홍(044-205-5308)"},
+					   "56" : {"DATA":"재난대응훈련과 이희재(044-205-5294)"}
+					   					   
+						};
+	
+	function JRSDDEPT(){
+		if(JRSDDEPTList.hasOwnProperty(pageParam.bbs_no)){
+	 var JRSDDEPT=JRSDDEPTList[pageParam.bbs_no].DATA;
+	 // 소관부서를 포함하는 게시판일 경우에 추가
+	 var CreateJRSDDEPT = '';
+// 	 CreateJRSDDEPT += '<br><br>';
+	 CreateJRSDDEPT += '<div style="border-top: solid 1.5px #dadada;margin-top: 30px;">';
+	 CreateJRSDDEPT += '<strong class="level4_title">' +'소관부서 : ' +JRSDDEPT + '</strong>';
+	 CreateJRSDDEPT += '</div>';
+	 $('#content').append(CreateJRSDDEPT);
+		}
+		
+	}
+	//게시판 소관부서 테스트 끝
+</script>
+<div style=" margin: 0 auto;">
+	<div id="noticeBox" style="display:none; width:1170px; margin: 0 auto;" class="w2group contextIndent_oneDepList">
+		<strong id="wq_uuid_79" style="text-indent:0px;" class="w2textbox dot_bulTxt_txtIndent">국민재난안전포털'참여와신고 &gt; QnA'가 행정기관 민원서비스 통합에 따라 국민권익위원회에서 운영하는 <b style="font-weight: bold;color: #0000b1;">국민신문고 <a href="http://www.epeople.go.kr" target="_blank" title="새창열기" tabindex="0"> <b style="font-weight:bold;color: #0000b1;">(www.epeople.go.kr)</b></a> 를 통하여 관리</b>되고 있습니다.기존 질의/답변 내용은 <b style="font-weight:bold;color:#0000b1;">2018년 12월 31일까지 서비스 예정이오니</b> 이용에 참고하시기 바랍니다.</strong><strong id="wq_uuid_80" style="text-indent: 0px;" class="w2textbox dot_bulTxt_txtIndent"></strong>
+		<strong id="wq_uuid_81" style="text-indent: 0px;" class="w2textbox dot_bulTxt_txtIndent"><br>국민재난안전포털 이용문의 : <b style="font-weight: bold;color: #0000b1;">044-205-8462</b></strong>
+		<strong id="wq_uuid_82" style="text-indent: 0px;" class="w2textbox dot_bulTxt_txtIndent">자주묻는 질문 <a href="http://www.safekorea.go.kr/idsiSFK/neo/sfk/cs/csc/bbs_conf.jsp?bbs_no=7&amp;menuSeq=693" tabindex="0"><b style="font-weight: bold;color: #0000b1;">바로가기</b></a></strong>
+	</div>	
+</div>
+<div class="content" id="content">
+	<div class="level1_titleWrap">
+		<h2 class="level1_title">자료실</h2>
+		<div class="sns_bt">
+			
+			
+			
+		<a data-toggle="sns_share" tabindex="0" data-service="facebook" data-title="페이스북 SNS공유" title="페이스북 SNS공유 새창열기" class="facebook"></a><a data-toggle="sns_share" tabindex="0" data-service="twitter" data-title="X SNS공유" title="X SNS공유 새창열기" class="twitter"></a><a data-toggle="sns_share" tabindex="0" data-service="kakaostory" data-title="카카오스토리 SNS공유" title="카카오스토리 SNS공유 새창열기" class="kakaostory"></a></div>
+	</div>
+	
+	<div id="contents" class="frame"> 
+
+<style>
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+</style>
+<script>
+var tmpDownloadScript = "";
+//**************************************************************************
+//DataMap
+//**************************************************************************
+var neoSafeKoreaSubDataMapList = [
+		//****************************************
+		// comCodeSearch
+		//****************************************
+		{
+			id : "comCodeSearch",
+			data : {
+				  searchCdKey : ""
+			}
+		}
+];
+
+
+//**************************************************************************
+//DataList
+//**************************************************************************
+var neoSafeKoreaSubDataListList = [
+		{ id:"amendmentCodeList1" },
+		{ id:"disasterACodeList1" },
+		{ id:"disasterBCodeList1" },
+		{ id:"DelYnList" },
+		{ id:"bbsList" }
+];
+
+
+//**************************************************************************
+//Submission
+//**************************************************************************
+var neoSafeKoreaSubSubmissionList = [
+
+   		//******************************************************************
+  		// getDisasterAComCdInfo_submission
+  		//******************************************************************
+  		{
+  			  id          : "getDisasterAComCdInfo_submission"
+  			//, submiterror : getCdInfo_submission_submiterror
+  			, submitdone  : getDisasterAComCdInfo_submission_submitdone
+  			, processMsg  : "조회중입니다..."
+  			, mode        : "asynchronous"
+  			, ref         : {"id":"comCodeSearch","action":"select","key":"searchInfo"}
+  			, target      : [{"id":"codeInfo","key":"cd_info"},{"id":"disasterACodeList1","key":"cd_list"}]
+  			, action      : "/idsiSFK/sfk/ca/cma/getComCdList.do"
+  			, encoding    : "UTF-8"
+  			, method      : "post"
+  			, mediatype   : "application/json"
+  		},
+
+		//******************************************************************
+		// getDisasterBComCdInfo_submission
+		//******************************************************************
+		{
+			  id          : "getDisasterBComCdInfo_submission"
+			//, submiterror : getCdInfo_submission_submiterror
+			, submitdone  : getDisasterBComCdInfo_submission_submitdone
+			, processMsg  : "조회중입니다..."
+			, mode        : "asynchronous"
+			, ref         : {"id":"comCodeSearch","action":"select","key":"searchInfo"}
+			, target      : [{"id":"codeInfo","key":"cd_info"},{"id":"disasterBCodeList1","key":"cd_list"}]
+			, action      : "/idsiSFK/sfk/ca/cma/getComCdList.do"
+			, encoding    : "UTF-8"
+			, method      : "post"
+			, mediatype   : "application/json"
+		},
+
+		//******************************************************************
+		// getAmendmentComCdInfo_submission
+		//******************************************************************
+		{
+			  id          : "getAmendmentComCdInfo_submission"
+			//, submiterror : getCdInfo_submission_submiterror
+			, submitdone  : getAmendmentComCdInfo_submission_submitdone
+			, processMsg  : "조회중입니다..."
+			, mode        : "asynchronous"
+			, ref         : {"id":"comCodeSearch","action":"select","key":"searchInfo"}
+			, target      : [{"id":"codeInfo","key":"cd_info"},{"id":"amendmentCodeList1","key":"cd_list"}]
+			, action      : "/idsiSFK/sfk/ca/cma/getComCdList.do"
+			, encoding    : "UTF-8"
+			, method      : "post"
+			, mediatype   : "application/json"
+		},
+
+		//******************************************************************
+		// getBbsSelect_submission
+		//******************************************************************
+		{
+			  id         : "getBbsSelect_submission"
+			, processMsg  : "조회중입니다..."
+			, submitdone : getBbsSelect_submitdone
+			, mode       : "asynchronous"
+			, ref        : {"id":"bbs_searchInfo","key":"bbs_searchInfo"}
+			, target     : [{"id":"bbsList","key":"bbsList"},{"id":"dm_resultMap","key":"rtnResult"}]
+			, action     : "/idsiSFK/bbs/user/selectBbsList.do"
+			, encoding   : "UTF-8"
+			, method     : "post"
+			, mediatype  : "application/json"
+		}
+];
+
+
+$(function(){
+	safeKoreaEngineInitializeDataMap(neoSafeKoreaSubDataMapList);
+	safeKoreaEngineInitializeDataList(neoSafeKoreaSubDataListList);
+	safeKoreaEngineInitializeSubmission(neoSafeKoreaSubSubmissionList);
+	
+	$('#contents a').attr('tabindex', 0);
+	$('body input[type=radio]').attr('tabindex', 0);
+	
+	//enter 이벤트 추가
+	$('body a').on('keydown', function(event) {
+		if (event.keyCode == 13) {
+			if ($(this).children().length != 0) {//a태그에 하위태그가 존재 할 경우
+				$(this).children().eq(0).click();
+			} else {
+				$(this).click();
+			}
+		}
+	});
+	
+	$('body input[type=radio]').on('keydown', function(event) {
+		if (event.keyCode == 13) {
+			$(this).click();
+		}
+	});
+	$('body input[type=checkbox]').on('keydown', function(event) { //체크 박스 이벤트
+		if (event.keyCode == 13) {
+			$(this).click();
+		}
+	});
+	
+	//2024웹접근성 추가
+	$('.navi_link').attr('tabindex','-1');
+});
+
+//**************************************************************************
+//
+//**************************************************************************
+
+	var bbs_no = null;
+	
+	$(function(){
+		//wframe 사용으로 bbs_conf_user_list.xml 파일 bbs_searchInfo 사용
+		bbs_no = bbs_searchInfo.get('bbs_no');
+		initPage();
+	});
+			
+	//초기화
+	function initPage(){		
+		NeoSafeKoreaGenerator.call(document.getElementById("bbs_col"));
+		NeoSafeKoreaGenerator.call(document.getElementById("bbs_th"));
+		NeoSafeKoreaGenerator.call(document.getElementById("bbs_tr"));
+		
+		search_type_v.setValue( bbs_searchInfo.get( "search_type_v" ) );
+		search_val_v.setValue( bbs_searchInfo.get( "search_val_v" ) );
+		search_start.setValue( bbs_searchInfo.get( "search_start" ) );
+		search_end.setValue( bbs_searchInfo.get( "search_end"	 ) );
+		bbs_page.setValue( bbs_searchInfo.get( "pageIndex" ) );
+		
+		if(bbsConfMap.get( "dstr_ty_use_at" ) == 'N'){//재난
+			$("#disasterYnTr").remove();
+			search_disaster_li.setStyle( "display" , "none" );
+		}
+		else{
+			//공통 코드 재난 유형
+		    comCodeSearch.set("searchCdKey" , "C_OCRC_TYPE");		
+		    getDisasterAComCdInfo_submission.exec();
+		    search_disaster_li.setStyle("display" , "");    
+		}
+		
+		if(bbsConfMap.get( "estb_reform_dy_use_at" ) == 'N'){//재정&개정
+			$("#amendmentYnTr").remove();
+			search_amendment_li.setStyle("display" , "none");
+		}
+		else{
+			search_amendment_li.setStyle( "display" , "" );
+			//공통 코드 제ㆍ개정
+			comCodeSearch.set( "searchCdKey", "JT0000");		
+		    getAmendmentComCdInfo_submission.exec();
+		}
+		
+		bbs_searchInfo.set("pageUnit", bbsConfMap.get("bbs_list_outpt_cnt"));
+		getBbsSelect_submission.exec();
+		
+		//자주묻는질문, 자주묻는질문(풍수해보험) 검색조건
+		if(bbs_searchInfo.get("bbs_no")==7||bbs_searchInfo.get("bbs_no")==21){
+			test.setStyle("display","none");
+		}
+		
+		//웹 개방성 때문에 상세페이지에서 다시 목록으로 나왔을경우 상세페이지 URL이 잔존하여 그부분을 삭제하기 위해 사용
+		var location_URL = window.location.href.split('&viewtype');
+		history.pushState(null, null, location_URL[0]);
+	}
+	
+	function getDisasterAComCdInfo_submission_submitdone(e) {
+		var data = disasterACodeList1.getAllJSON();
+		
+		search_disaster_a.removeAll();
+		
+		for(var i=0; i<data.length; i++){
+			var objOption = document.createElement("option");   
+			objOption.value = data[i]["cdKey"];
+			objOption.text  = data[i]["cdNm"];
+			search_disaster_a.options.add(objOption);
+		}
+		
+		search_disaster_a.setValue( bbs_searchInfo.get( "search_disaster_a" ) );
+		comCodeSearch.set( "searchCdKey" , bbs_searchInfo.get( "search_disaster_a" ) );	
+		
+		if(!CommonUtil.isNull(search_disaster_a.getValue()))
+			getDisasterBComCdInfo_submission.exec();
+	}
+	
+	function getDisasterBComCdInfo_submission_submitdone(e) {
+		var data = disasterBCodeList1.getAllJSON();
+		
+		search_disaster_b.removeAll();
+		
+		for(var i=0; i<data.length; i++){
+			var objOption = document.createElement("option");   
+			objOption.value = data[i]["cdKey"];
+			objOption.text  = data[i]["cdNm"];
+			search_disaster_b.options.add(objOption);
+		}
+		
+		search_disaster_b.setValue( bbs_searchInfo.get( "search_disaster_b" ) );
+	}
+	
+	function getAmendmentComCdInfo_submission_submitdone(e) {
+		var data = amendmentCodeList1.getAllJSON();
+		
+		search_amendment.removeAll();
+		
+		for(var i=0; i<data.length; i++){
+			var objOption = document.createElement("option");   
+			objOption.value = data[i]["cdKey"];
+			objOption.text  = data[i]["cdNm"];
+			search_amendment.options.add(objOption);
+		}
+		
+		search_amendment.setValue( bbs_searchInfo.get( "search_amendment" ) );
+	}
+			
+	//리스트 콜백
+	function getBbsSelect_submitdone(e) {
+		var pageSizeChk = parseInt(dm_resultMap.get( "pageSize" )) ;
+		var i = parseInt(bbs_page.getValue());
+		
+		totCnt.setValue(dm_resultMap.get("totCnt"));
+		
+		if(0 < i && i <= pageSizeChk){
+			bbs_searchInfo.set("pageIndex", i);
+			minPage.setValue(i);
+			bbs_page.setValue(i);
+		}
+		else{	
+			bbs_searchInfo.set("pageIndex", 1);
+			bbs_page.setValue("1");
+		}
+
+		// 페이징 시작
+		bbs_searchInfo.set( "pageSize" , dm_resultMap.get( "pageSize" ) );
+		minPage.setValue( bbs_searchInfo.get( "pageIndex" ) );
+		maxPage.setValue( bbs_searchInfo.get( "pageSize" ) );
+		bbs_page.setValue( bbs_searchInfo.get( "pageIndex" ) );
+		// 페이징 끝
+			
+		// 보여줄 컬럼
+		var sj_use_list_cn = bbsConfMap.get( 'sj_use_list_cn' ).split(' ');
+		bbs_col.removeAll();
+		bbs_th.removeAll();
+		
+		colListTmp = sj_use_list_cn;
+
+		var colObj = {
+			 "num" : "번호"
+			,"sj" : "제목"
+			,"usr_nm" : "작성자"
+			,"usr_dept_nm" : "부서"
+			,"frst_regist_dt" : "등록일"
+			,"dstr_ty_b_cd_nm" : "재난유형"
+			,"usr_expsr_at_nm" : "공개여부"
+			,"cfm_at_nm" : "승인여부"
+			,"file" : "첨부"
+			,"qry_cnt" : ""
+			,"estb_reform_nm" : "제ㆍ개정일"
+		};
+
+		colList = colListTmp.map(function(v){		
+			return colObj[v];
+		});
+	
+		$('.boardList_table').children('caption').text($('.level1_title').text() + ' 목록 - ' + colList.join(', '));
+	
+		//헤더 리스트
+		for ( i = 0 ; i < sj_use_list_cn.length ; i++) {
+			//공개여부 미노출
+			if( sj_use_list_cn[i] != "usr_expsr_at_nm"){
+				//승인여부 미노출
+				if(sj_use_list_cn[i] != "cfm_at_nm"){
+					var index_col = bbs_col.insert();
+					var index_th = bbs_th.insert();
+					bbs_col.getChild(index_col, "bbs_col_width").setStyle( "width" , bbsTitleColSize(sj_use_list_cn[i])+"%" );
+					//sj_use_list_cn = ['num','sj','usr_nm','usr_dept_nm','frst_regist_dt','qry_cnt']
+					bbs_th.getChild(index_th, "bb_header_title").setValue( bbsTitleNm(sj_use_list_cn[i]) );
+					console.log(sj_use_list_cn);
+					
+				}
+			}
+		}
+		
+		bbs_tr.removeAll();
+			
+		if(bbsList.getRowCount() > 0){
+			//데이터 리스트
+			for(var i =0 ; i < bbsList.getRowCount() ; i ++){
+				var index_tr = bbs_tr.insert();
+
+				$("[id^=bbs_col_]").removeAttr("g_index");
+				$("[id^=bbs_th_]").removeAttr("g_index");
+				$("[id^=bbs_tr_]").removeAttr("g_index");
+				
+				bbs_tr.getChild(index_tr, "apiData1").setStyle( "display" , "" );
+				bbs_tr.getChild(index_tr, "apiData2").setStyle( "display" , "none" );
+				
+						//debugger;//notice_matter_at
+				for ( j = 0 ; j < sj_use_list_cn.length ; j++) {
+					if(sj_use_list_cn[j] =="num"){//번호
+						bbs_tr.getChild(index_tr, "num").setStyle( "display" , "" );
+						bbs_tr.getChild(index_tr, "num_td").setValue(bbsList.getCellData( i , sj_use_list_cn[j] ));
+						//2024 공지추가
+						/*
+						if(bbsList.data[i].notice_matter_at == 'Y'){
+							bbs_tr.getChild(index_tr, "num_td").setValue('공지');
+							bbs_tr.getChild(index_tr, "num_td").setStyle('font-weight','bold');
+						}
+						*/
+					}
+					else if(sj_use_list_cn[j] =="sj"){//제목
+						bbs_tr.getChild(index_tr, "sj").setStyle( "display" , "" );
+						var bbs_href= "javascript:bbsDtl(\'"+bbsList.getCellData( i , "bbs_no" ) +"\',\'"+bbsList.getCellData( i , "bbs_ordr" ) +"\');";
+						bbs_tr.getChild(index_tr, "bbs_title").setHref(bbs_href);
+						
+						if(bbs_searchInfo.get("bbs_no") == 63){
+							var cnText = bbsList.getCellData( i , 'cn' );
+	         				bbs_tr.getChild(index_tr, "bbs_title").setValue( bbsList.getCellData( i , sj_use_list_cn[j] ) + cnText.substring(cnText.indexOf('['), cnText.indexOf(']')+1) );
+						}
+						// 2024.02.02 han
+						// 민방위 자료실 첨부파일 보기
+						else if(bbs_no == 10) {
+							bbs_tr.getChild(index_tr, "bbs_title").setValue( bbsList.getCellData( i , sj_use_list_cn[j] ) );
+
+							var file_data = bbsList.getCellData(i, "file_list");
+							var file_cnt  = bbsList.getCellData(i, "file_cnt");
+							var tot_file_size = 0;
+
+							// 첨부파일이 2개 이상인 경우에 실행
+							if(file_cnt > 1) {
+								for (f = 0 ; f < file_cnt ; f++) {
+									var file_co = file_list(f, " file_co", file_data);
+									tot_file_size += Number(file_co);
+								}
+								tot_file_size = Math.round(tot_file_size * 10 / 1024 / 1024) / 10
+								bbs_tr.getChild(index_tr, "bbs_title_file").setStyle( "display" , "" );
+								bbs_tr.getChild(index_tr, "bbs_title_file").setValue('<br>' + tot_file_size + 'MB (' + file_cnt + '개 분할)');
+							}
+						}
+	         			else
+	         				bbs_tr.getChild(index_tr, "bbs_title").setValue( bbsList.getCellData( i , sj_use_list_cn[j] ) );
+	         			
+	         			var today1 = new Date();
+						var today2 = new Date(bbsList.getCellData( i , "frst_regist_dt"));
+						today1.setDate(today1.getDate() - Number(bbsConfMap.get( 'bbs_new_daycnt' )));
+						if(today1 <= today2){
+							bbs_tr.getChild(index_tr, "bbs_new").setStyle( "display" , "" );
+						}
+					}
+					else if(sj_use_list_cn[j] =="usr_nm"){//작성자
+						bbs_tr.getChild(index_tr, "usr_nm").setStyle( "display" , "" );
+					
+						if(bbs_no == "73") {
+							var tmpNm = bbsList.getCellData( i , sj_use_list_cn[j] );
+							
+							var name = tmpNm.substring(0, 1);
+							for(var k = 0; k < tmpNm.length-1; k++) {
+								name += "*";
+							}
+							
+							bbs_tr.getChild(index_tr, "usr_nm_td").setValue(name);
+							
+							$("#registBtn").css("display", "inline-block");
+						} else {
+							bbs_tr.getChild(index_tr, "usr_nm_td").setValue(bbsList.getCellData( i , sj_use_list_cn[j] ));
+						}
+					}
+					else if(sj_use_list_cn[j] =="usr_dept_nm"){//부서
+						bbs_tr.getChild(index_tr, "usr_dept_nm").setStyle( "display" , "" );
+						bbs_tr.getChild(index_tr, "usr_dept_nm_td").setValue(bbsList.getCellData( i , sj_use_list_cn[j] ));
+						if(bbs_no == '17'){ //재난상식
+							bbs_tr.getChild(index_tr, "usr_dept_nm_td").setValue(bbsList.getCellData( i , "" ));
+						}
+					}
+					else if(sj_use_list_cn[j] =="frst_regist_dt"){//작성날짜
+						bbs_tr.getChild(index_tr, "frst_regist_dt").setStyle( "display" , "" );
+						bbs_tr.getChild(index_tr, "frst_regist_dt_td").setValue(bbsList.getCellData( i , sj_use_list_cn[j] ));
+					}
+					else if(sj_use_list_cn[j] =="dstr_ty_b_cd_nm"){//재난유형
+						bbs_tr.getChild(index_tr, "dstr_ty_b_cd_nm").setStyle( "display" , "" );
+						bbs_tr.getChild(index_tr, "dstr_ty_b_cd_nm_td").setValue(bbsList.getCellData( i , sj_use_list_cn[j] ));
+						
+					}
+					else if(sj_use_list_cn[j] =="usr_expsr_at_nm"){//공개여부
+						//bbs_tr.getChild(index_tr, "usr_expsr_at_nm").setStyle( "display" , "" );
+						//bbs_tr.getChild(index_tr, "usr_expsr_at_nm_td").setValue(bbsList.getCellData( i , sj_use_list_cn[j] ));
+					}
+					else if(sj_use_list_cn[j] =="cfm_at_nm"){//승인여부
+						//bbs_tr.getChild(index_tr, "cfm_at_nm").setStyle( "display" , "" );
+						//bbs_tr.getChild(index_tr, "cfm_at_nm_td").setValue(bbsList.getCellData( i , sj_use_list_cn[j] ));
+					}
+					else if(sj_use_list_cn[j] =="file"){//파일
+						bbs_tr.getChild(index_tr, "file").setStyle( "display" , "" );
+	         			bbs_tr.getChild(index_tr, "bbs_file").setValue( file_html(i) );
+	         			
+	         			bbs_tr.getChild(index_tr, "bbs_file").setHref( tmpDownloadScript );
+	         			
+	         			//2025 웹접근성 조치 파일없으면 링크도 없음
+	         			if(file_html(i) == ""){
+	         				bbs_tr.getChild(index_tr, "bbs_file").remove();
+	         			}
+	         			
+					}
+					else if(sj_use_list_cn[j] =="qry_cnt"){//조회수
+						bbs_tr.getChild(index_tr, "qry_cnt").setStyle( "display" , "none" );
+						bbs_tr.getChild(index_tr, "qry_cnt_td").setValue(bbsList.getCellData( i , sj_use_list_cn[j] ));
+					}
+					else if(sj_use_list_cn[j] =="estb_reform_nm"){//제ㆍ개정
+						bbs_tr.getChild(index_tr, "estb_reform_nm").setStyle( "display" , "" );
+						bbs_tr.getChild(index_tr, "estb_reform_nm_td").setValue(bbsList.getCellData( i , sj_use_list_cn[j] ));
+					}
+					else if(sj_use_list_cn[j] =="rgr_rgr_reform_de"){//제ㆍ개정일
+						bbs_tr.getChild(index_tr, "rgr_rgr_reform_de").setStyle( "display" , "" );
+						bbs_tr.getChild(index_tr, "rgr_rgr_reform_de_td").setValue(bbsList.getCellData( i , sj_use_list_cn[j] ));
+					}
+				}
+				
+				var k = 0;
+				var obj = $(bbs_tr.getChild(index_tr, "apiData1"));
+				
+				while(k < obj.children().size()) {					
+					if(obj.children().eq(k).css("display") == "none") {
+						obj.children().eq(k).remove();
+					} else {
+						k++;
+					}
+				}
+			}
+		}
+		else{
+			var index_tr = bbs_tr.insert();
+
+			$("[id^=bbs_col_]").removeAttr("g_index");
+			$("[id^=bbs_th_]").removeAttr("g_index");
+			$("[id^=bbs_tr_]").removeAttr("g_index");
+			
+			bbs_tr.getChild(index_tr, "apiData1").setStyle( "display" , "none" );
+			bbs_tr.getChild(index_tr, "apiData2").setStyle( "display" , "" );
+			
+			// bbs_tr_0_ 는 generator id 와 index 번호가 붙음.
+			$("#bbs_tr_0_bbs_td").attr("colspan", sj_use_list_cn.length);
+		}
+	}
+			
+	//리스트 컬럼명
+	function bbsTitleNm(str){
+		var title = (str=="num"            ) ? "번호":
+		            (str=="sj"             ) ? "제목":
+		            (str=="usr_nm"         ) ? "작성자":
+		            (str=="usr_dept_nm"    ) ? "부서":
+		            (str=="frst_regist_dt" ) ? "등록일":
+		            (str=="dstr_ty_b_cd_nm") ? "재난유형":
+		            (str=="usr_expsr_at_nm") ? "공개여부":
+		            (str=="cfm_at_nm"      ) ? "승인여부":
+		            (str=="file"           ) ? "첨부":
+		            (str=="qry_cnt"        ) ? "":
+		            (str=="estb_reform_nm" ) ? "제ㆍ개정":"제ㆍ개정일";
+		if(bbs_no == '17' && str=="usr_dept_nm"){	// 재난상식
+			title = "";
+		}
+		
+		return title;
+	}
+	
+	//리스트 컬럼명 사이즈
+	function bbsTitleColSize(str){
+		var title = (str=="num"            ) ? "8":  // 번호 num               
+		            (str=="sj"             ) ? "30": // 제목 sj                
+		            (str=="usr_nm"         ) ? "10": // 작성자 usr_nm           
+		            (str=="usr_dept_nm"    ) ? "10": // 부서 usr_dept_cd       
+		            (str=="frst_regist_dt" ) ? "10": // 작성날짜 frst_regist_dt  
+		            (str=="dstr_ty_b_cd_nm") ? "10": // 재난유형 dstr_ty_b_cd    
+		            (str=="usr_expsr_at_nm") ? "8":  // 공개여부 usr_expsr_at    
+		            (str=="cfm_at_nm"      ) ? "8":  // 승인여부 cfm_at          
+		            (str=="file"           ) ? "10": // 첨부 file              
+		            (str=="qry_cnt"        ) ? "8":  // 조회수 qry_cnt          
+		            (str=="estb_reform_nm" ) ? "10":"10"; //제ㆍ개정 : 제ㆍ개정일 estb_reform_cd : rgr_rgr_reform_de
+		            
+		if(bbs_no == 74){            
+	      	title = (str=="num"            ) ? "10":  // 번호 num               
+		            (str=="sj"             ) ? "60": // 제목 sj                
+		            (str=="usr_nm"         ) ? "20": // 작성자 usr_nm           
+		            (str=="usr_dept_nm"    ) ? "10": // 부서 usr_dept_cd       
+		            (str=="frst_regist_dt" ) ? "20": // 작성날짜 frst_regist_dt  
+		            (str=="dstr_ty_b_cd_nm") ? "10": // 재난유형 dstr_ty_b_cd    
+		            (str=="usr_expsr_at_nm") ? "8":  // 공개여부 usr_expsr_at    
+		            (str=="cfm_at_nm"      ) ? "8":  // 승인여부 cfm_at          
+		            (str=="file"           ) ? "10": // 첨부 file              
+		            (str=="qry_cnt"        ) ? "0":  // 조회수 qry_cnt          
+		            (str=="estb_reform_nm" ) ? "0":"0"; //제ㆍ개정 : 제ㆍ개정일 estb_reform_cd : rgr_rgr_reform_de           
+		}			            
+			            
+			            
+		if(bbs_no == '17'){ // 재난상식
+			if(str=="sj"){
+				title = "39";
+			}
+			else if(str=="usr_dept_nm"){
+				title = "1";
+			}
+		}
+		            
+		return title;
+	}
+	
+	//상세 페이지 이동
+	function bbsDtl(bbs_no , bbs_ordr){
+		if(parseInt(bbsConfMap.get( 'blts_dtl_qry_athr_value' )) < 98){
+			alert("권한이 필요합니다.");
+			return false;
+		}
+
+		//wframe 사용으로 bbs_conf_user_list.xml 파일 bbs_searchInfo 사용
+		bbs_searchInfo.set("bbs_no",   bbs_no);   // 게시판 번호
+		bbs_searchInfo.set("bbs_ordr", bbs_ordr); // 게시 내용 번호
+		bbs_searchInfo.set("opCode",   "2" );     // 1번:등록 2번:수정
+		var path ="/idsiSFK/neo/sfk/cs/csc/" + bbsConfMap.get('ty_cd') + "_user_detail.jsp";				
+
+		contents.setSrc(path);
+	}
+
+	//검색
+	function fn_search() {
+		//글 상세조회 권한
+		if(parseInt(bbsConfMap.get("sntnc_list_athr_value")) > 98 ){
+			if(!CommonUtil.isNull(search_start.getValue()) && !CommonUtil.isNull(search_end.getValue())){
+				//날짜 전후 비교
+				if(!valLib.compareDate( search_start.getValue() , search_end.getValue() , 4, "시작일자", "종료일자" )){
+					search_start.focus();
+					return false;
+				}
+				
+			}
+
+			bbs_searchInfo.set("search_type_v", search_type_v.getValue());
+			bbs_searchInfo.set("search_val_v", search_val_v.getValue());					
+			getBbsSelect_submission.exec();
+		}
+		else{
+			alert("권한이 필요합니다.");
+		} 
+	}
+			
+	//파일 다운로드
+	function file_down(water_li_file_nm, file_nm) {
+		CommonUtil.downloadSfkBbsFile(encodeURIComponent( water_li_file_nm), encodeURIComponent(file_nm));
+	}
+			
+	// 파일 리스트 html 코딩
+	function file_html(i){
+		var file_data = bbsList.getCellData(i, "file_list");
+		var file_cnt  = bbsList.getCellData(i, "file_cnt");
+		var html_file ="";
+		for (f=0 ; f < file_cnt ; f++) {
+			var water_li_file_nm = file_list(f, " water_li_file_nm", file_data);
+			var file_nm          = file_list(f, " file_nm",          file_data);
+			var file_ty_value    = file_list(f, " file_ty_value",    file_data);
+			html_file +="<img src=\"/idsiSFK/neo/ext/img_jp/board_fileicon.gif\" alt=\"'" + file_nm + "' 첨부파일\" onclick=\"file_down('" + water_li_file_nm.replace('\\','/') + "', '" + file_nm + "');\" >&nbsp;";
+			tmpDownloadScript = "javascript:file_down('" + water_li_file_nm.replace('\\','/') + "', '" + file_nm + "');";
+		}	
+		return html_file;
+	}
+	
+	// 파일 이름 가져오기 (row, 찾는 컬럼, 데이타)
+	function file_list(i, str1, str2) {
+		var t1 = str2.split("},");
+		var t2 = t1[i].replaceAll("}]","").replaceAll("[{","").replaceAll("},{","").split(",");
+		for(var j = 0 ; j < t2.length ; j++){
+			if(t2[j].indexOf(str1) >= 0){
+				return t2[j].split("=")[1];
+			}
+		}
+		return "";
+	}
+
+	function search_disaster_a_onchange() {
+		bbs_searchInfo.set( "search_disaster_a", search_disaster_a.getValue() );
+		comCodeSearch.set( "searchCdKey" , bbs_searchInfo.get( "search_disaster_a" ) );		
+
+		if(!CommonUtil.isNull(search_disaster_a.getValue()))
+	    	getDisasterBComCdInfo_submission.exec();
+		else
+			search_disaster_b.removeAll();
+	};
+
+	function search_disaster_b_onchange() {
+		bbs_searchInfo.set( "search_disaster_b", search_disaster_b.getValue() );
+	};
+
+	function search_amendment_onchange() {
+		bbs_searchInfo.set( "search_amendment", search_amendment.getValue() );
+	};
+	
+	function search_val_v_onkeydown(e) {
+		if(event.keyCode == 13){
+			fn_search();
+		}
+	};
+
+	function sDateValid(){
+		var word = search_start.getValue();
+		if(word == ""){
+		}
+		else if(!(DateUtil.checkDate(word))){
+			alert('날짜형식이 맞지 않습니다.');
+			search_start.setValue('');
+			return false;
+		}
+		
+		bbs_searchInfo.set("search_start", word);
+	}
+			
+	function eDateValid(){
+		var word = search_end.getValue();
+		if(word == ""){
+		}
+		else if(!(DateUtil.checkDate(word))){
+			alert('날짜형식이 맞지 않습니다.');
+			search_end.setValue('');
+			return false;
+		}
+		
+		bbs_searchInfo.set("search_end", word);
+	}
+	
+	function onSearchBtnClick(){
+		bbs_searchInfo.set("pageIndex", 1);
+		fn_search();
+	}
+	
+	function onPrevPageBtnClick(){
+		if(bbs_searchInfo.get("pageIndex") > 1){
+			var pageIndex = Number(bbs_searchInfo.get("pageIndex")) ;
+			bbs_searchInfo.set("pageIndex" , pageIndex - 1);
+			bbs_page.setValue( pageIndex-1 );
+		}
+		getBbsSelect_submission.exec();	
+	}
+	
+	function onNextPageBtnClick(){
+		if(bbs_searchInfo.get("pageIndex") < dm_resultMap.get( "pageSize" )){
+			var pageIndex = Number(bbs_searchInfo.get("pageIndex")) ;
+			bbs_searchInfo.set("pageIndex" , pageIndex + 1);
+			bbs_page.setValue( pageIndex+1 );
+		}
+		getBbsSelect_submission.exec();	
+	}
+
+	function onGoToPageBtnClick(){
+		var pageSize = parseInt(dm_resultMap.get( "pageSize" )) ;
+		var i = parseInt(bbs_page.getValue());
+		if((i<=0)|| (i > pageSize)){
+			alert("해당 페이지는 존재하지 않습니다.");
+			bbs_page.setValue("");
+			return;
+		}
+		
+		bbs_searchInfo.set( "pageIndex",i );
+		getBbsSelect_submission.exec();
+	}
+	
+	$('.navi_link').attr('tabindex','-1');
+	
+</script>
+
+<div class="boardSearch_box">
+	<ul class="boardSearch_formWrap">
+		<li class="boardSearch_formCell" id="search_disaster_li">
+			<span id="search_disaster_label" class="sch_label">재난유형</span>
+			<select id="search_disaster_a" class="boardSearch_select" onchange="search_disaster_a_onchange()" aria-labelledby="search_disaster_label" title="재난 유형 선택">
+				<option value="">전체</option>
+			<option value="1">자연재난</option><option value="2">인적재난</option><option value="3">사회재난</option><option value="4">생활안전</option></select>
+			<select id="search_disaster_b" class="boardSearch_select" onchange="search_disaster_b_onchange()" aria-labelledby="search_disaster_label" title="재난 유형 세부 선택">
+				<option value="">전체</option>
+			</select>
+		</li>
+		<li class="boardSearch_formCell" id="search_amendment_li" style="display: none;">
+			<span id="search_amendment_label" class="sch_label">제정ㆍ개정</span>
+			<select id="search_amendment" class="boardSearch_select" aria-labelledby="search_amendment_label" onchange="search_amendment_onchange()" title="제정ㆍ개정 선택">
+				<option value="">전체</option>
+			</select>
+		</li>
+		<li class="boardSearch_formCell">
+		  <!-- 검색 유형에 대한 label -->
+		  <label for="search_type_v" class="sch_label">기본검색</label>
+		  <select id="search_type_v" class="boardSearch_select" title="기본검색: 검색 유형 선택">
+		      <option value="1">제목</option>
+		      <option value="2">내용</option>
+		  </select>
+		
+		  <!-- 화면에는 보이지 않지만 스크린 리더에서는 읽히도록 하는 label -->
+		  <label for="search_val_v" class="sr-only">검색어 입력</label>
+		  <input type="text" class="search04_input" onkeydown="search_val_v_onkeydown()" id="search_val_v" aria-label="검색어" title="기본검색: 검색어 입력">
+		</li>
+		
+		<li class="boardSearch_formCell" id="test">
+		  <!-- 화면에 보이는 그룹 제목 (등록일) -->
+		  <span class="sch_label">등록일</span>
+		  <!-- 입력 필드들을 감싸는 컨테이너 (디자인 유지용) -->
+		  <div style="display: inline-flex; align-items: center;">
+		    <!-- 스크린 리더 전용 label: 첫 번째 입력 필드 -->
+		    <label for="search_start" class="sr-only">
+		      등록일 조회시작 날짜 입력 예) 20251005
+		    </label>
+		    <input type="number" placeholder="예)20251005" class="calendar_input" onblur="sDateValid()" id="search_start" title="등록일 조회시작 날짜 입력 예) 20251005">
+		    <span class="schTxt" aria-hidden="true" style="margin: 0 4px;">-</span>
+		    <!-- 스크린 리더 전용 label: 두 번째 입력 필드 -->
+		    <label for="search_end" class="sr-only">
+		      등록일 조회마지막 날짜 입력 예) 20251005
+		    </label>
+		    <input type="number" placeholder="예)20251005" class="calendar_input" onblur="eDateValid()" id="search_end" title="등록일 조회마지막 날짜 입력 예) 20251005">
+		  </div>
+		</li>  
+	</ul>
+	<a class="search_btn" tabindex="0" onclick="onSearchBtnClick()">검색</a>
+</div>
+<div class="boardTOP_boxWrap">
+	<div class="boardTop_status">
+		<span>전체</span>
+		<span class="total" id="totCnt">207</span>
+		<span>건</span>
+	</div>
+</div>
+<div class="boardList_boxWrap">
+	<table class="boardList_table">
+		<caption>자료실 목록 - 번호, 제목, 부서, 등록일, 첨부</caption>
+		<colgroup id="bbs_col">
+			
+		<col id="bbs_col_0_bbs_col_width" style="width: 8%;"><col id="bbs_col_1_bbs_col_width" style="width: 30%;"><col id="bbs_col_2_bbs_col_width" style="width: 10%;"><col id="bbs_col_3_bbs_col_width" style="width: 10%;"><col id="bbs_col_4_bbs_col_width" style="width: 10%;"></colgroup>
+		<thead>
+			<tr id="bbs_th">
+				
+			<th id="bbs_th_0_bb_header" scope="col">
+					<span id="bbs_th_0_bb_header_title">번호</span>
+				</th><th id="bbs_th_1_bb_header" scope="col">
+					<span id="bbs_th_1_bb_header_title">제목</span>
+				</th><th id="bbs_th_2_bb_header" scope="col">
+					<span id="bbs_th_2_bb_header_title">부서</span>
+				</th><th id="bbs_th_3_bb_header" scope="col">
+					<span id="bbs_th_3_bb_header_title">등록일</span>
+				</th><th id="bbs_th_4_bb_header" scope="col">
+					<span id="bbs_th_4_bb_header_title">첨부</span>
+				</th></tr>
+		</thead>
+		<tbody id="bbs_tr">
+			
+			
+		<tr id="bbs_tr_0_apiData1">
+				<td id="bbs_tr_0_num" style="">
+					<span id="bbs_tr_0_num_td">207</span>
+				</td>
+				<td class="subject" id="bbs_tr_0_sj" style="">
+					<a id="bbs_tr_0_bbs_title" class="ellipsis" tabindex="0" href="javascript:bbsDtl('9','2652');">방화벽 포트 허용(차단) 요청서 양식</a>
+					<i class="new_imgSet_icon" id="bbs_tr_0_bbs_new" style="display:none;" title="new"></i>
+					<span id="bbs_tr_0_bbs_title_file" style="display:none;font-size:17px; font-weight:bold; color:black;"><br g_index="0">70.2MB (8개 분할 압축)</span>
+				</td>
+				
+				<td id="bbs_tr_0_usr_dept_nm" style="">
+					<span id="bbs_tr_0_usr_dept_nm_td">재난정보통신과</span>
+				</td>
+				<td id="bbs_tr_0_frst_regist_dt" style="">
+					<span id="bbs_tr_0_frst_regist_dt_td">2025-11-13</span>
+				</td>
+				
+				
+				
+				<td id="bbs_tr_0_file" style="">
+					<a id="bbs_tr_0_bbs_file" class="ellipsis" tabindex="0" href="javascript:file_down('20240829/방화벽 포트 허용차단 신청서.zip', '방화벽 포트 허용차단 신청서.zip');"><img src="/idsiSFK/neo/ext/img_jp/board_fileicon.gif" alt="'방화벽 포트 허용차단 신청서.zip' 첨부파일" onclick="file_down('20240829/방화벽 포트 허용차단 신청서.zip', '방화벽 포트 허용차단 신청서.zip');">&nbsp;</a>
+				</td>
+				
+				
+				
+			</tr><tr id="bbs_tr_0_apiData2" style="display: none;">
+				<td id="bbs_tr_0_bbs_td" colspan="5">
+					<span id="bbs_tr_0_empty">등록된 데이타가 없습니다.</span>
+				</td>
+			</tr><tr id="bbs_tr_1_apiData1">
+				<td id="bbs_tr_1_num" style="">
+					<span id="bbs_tr_1_num_td">206</span>
+				</td>
+				<td class="subject" id="bbs_tr_1_sj" style="">
+					<a id="bbs_tr_1_bbs_title" class="ellipsis" tabindex="0" href="javascript:bbsDtl('9','2680');">한파쉼터 표지 디자인 </a>
+					<i class="new_imgSet_icon" id="bbs_tr_1_bbs_new" style="display:none;" title="new"></i>
+					<span id="bbs_tr_1_bbs_title_file" style="display:none;font-size:17px; font-weight:bold; color:black;"><br g_index="1">70.2MB (8개 분할 압축)</span>
+				</td>
+				
+				<td id="bbs_tr_1_usr_dept_nm" style="">
+					<span id="bbs_tr_1_usr_dept_nm_td">재난정보통신과</span>
+				</td>
+				<td id="bbs_tr_1_frst_regist_dt" style="">
+					<span id="bbs_tr_1_frst_regist_dt_td">2025-11-13</span>
+				</td>
+				
+				
+				
+				<td id="bbs_tr_1_file" style="">
+					<a id="bbs_tr_1_bbs_file" class="ellipsis" tabindex="0" href="javascript:file_down('20251113/[행정안전부]한파쉼터 (운영시간)_2.jpg', '[행정안전부]한파쉼터 (운영시간).jpg');"><img src="/idsiSFK/neo/ext/img_jp/board_fileicon.gif" alt="'[행정안전부]한파쉼터 (기본형).jpg' 첨부파일" onclick="file_down('20251113/[행정안전부]한파쉼터 (기본형).jpg', '[행정안전부]한파쉼터 (기본형).jpg');">&nbsp;<img src="/idsiSFK/neo/ext/img_jp/board_fileicon.gif" alt="'[행정안전부]한파쉼터 (CI).jpg' 첨부파일" onclick="file_down('20251113/[행정안전부]한파쉼터 (CI).jpg', '[행정안전부]한파쉼터 (CI).jpg');">&nbsp;<img src="/idsiSFK/neo/ext/img_jp/board_fileicon.gif" alt="'[행정안전부]한파쉼터 CI.ai' 첨부파일" onclick="file_down('20251113/[행정안전부]한파쉼터 CI.ai', '[행정안전부]한파쉼터 CI.ai');">&nbsp;<img src="/idsiSFK/neo/ext/img_jp/board_fileicon.gif" alt="'[행정안전부]한파쉼터 (운영시간).jpg' 첨부파일" onclick="file_down('20251113/[행정안전부]한파쉼터 (운영시간)_2.jpg', '[행정안전부]한파쉼터 (운영시간).jpg');">&nbsp;</a>
+				</td>
+				
+				
+				
+			</tr><tr id="bbs_tr_1_apiData2" style="display: none;">
+				<td id="bbs_tr_1_bbs_td" colspan="5">
+					<span id="bbs_tr_1_empty">등록된 데이타가 없습니다.</span>
+				</td>
+			</tr><tr id="bbs_tr_2_apiData1">
+				<td id="bbs_tr_2_num" style="">
+					<span id="bbs_tr_2_num_td">205</span>
+				</td>
+				<td class="subject" id="bbs_tr_2_sj" style="">
+					<a id="bbs_tr_2_bbs_title" class="ellipsis" tabindex="0" href="javascript:bbsDtl('9','2679');">해파리 대량출현 행동요령 자료</a>
+					<i class="new_imgSet_icon" id="bbs_tr_2_bbs_new" style="display:none;" title="new"></i>
+					<span id="bbs_tr_2_bbs_title_file" style="display:none;font-size:17px; font-weight:bold; color:black;"><br g_index="2">70.2MB (8개 분할 압축)</span>
+				</td>
+				
+				<td id="bbs_tr_2_usr_dept_nm" style="">
+					<span id="bbs_tr_2_usr_dept_nm_td">재난정보통신과</span>
+				</td>
+				<td id="bbs_tr_2_frst_regist_dt" style="">
+					<span id="bbs_tr_2_frst_regist_dt_td">2025-08-28</span>
+				</td>
+				
+				
+				
+				<td id="bbs_tr_2_file" style="">
+					<a id="bbs_tr_2_bbs_file" class="ellipsis" tabindex="0" href="javascript:file_down('20250828/해파리 대량출현 국민행동요령.pdf', '해파리 대량출현 국민행동요령.pdf');"><img src="/idsiSFK/neo/ext/img_jp/board_fileicon.gif" alt="'해파리 대량출현 국민행동요령.pdf' 첨부파일" onclick="file_down('20250828/해파리 대량출현 국민행동요령.pdf', '해파리 대량출현 국민행동요령.pdf');">&nbsp;</a>
+				</td>
+				
+				
+				
+			</tr><tr id="bbs_tr_2_apiData2" style="display: none;">
+				<td id="bbs_tr_2_bbs_td" colspan="5">
+					<span id="bbs_tr_2_empty">등록된 데이타가 없습니다.</span>
+				</td>
+			</tr><tr id="bbs_tr_3_apiData1">
+				<td id="bbs_tr_3_num" style="">
+					<span id="bbs_tr_3_num_td">204</span>
+				</td>
+				<td class="subject" id="bbs_tr_3_sj" style="">
+					<a id="bbs_tr_3_bbs_title" class="ellipsis" tabindex="0" href="javascript:bbsDtl('9','2678');">비상시 국민행동요령 책자, 리플릿</a>
+					<i class="new_imgSet_icon" id="bbs_tr_3_bbs_new" style="display:none;" title="new"></i>
+					<span id="bbs_tr_3_bbs_title_file" style="display:none;font-size:17px; font-weight:bold; color:black;"><br g_index="3">70.2MB (8개 분할 압축)</span>
+				</td>
+				
+				<td id="bbs_tr_3_usr_dept_nm" style="">
+					<span id="bbs_tr_3_usr_dept_nm_td">재난정보통신과</span>
+				</td>
+				<td id="bbs_tr_3_frst_regist_dt" style="">
+					<span id="bbs_tr_3_frst_regist_dt_td">2025-08-13</span>
+				</td>
+				
+				
+				
+				<td id="bbs_tr_3_file" style="">
+					<a id="bbs_tr_3_bbs_file" class="ellipsis" tabindex="0" href="javascript:file_down('20250813/(리플릿) 인쇄용_2025 비상시 국민행동요령 3단 양면.pdf', '(리플릿) 인쇄용_2025 비상시 국민행동요령 3단 양면.pdf');"><img src="/idsiSFK/neo/ext/img_jp/board_fileicon.gif" alt="'(홍보책자) 단면_2025 비상시 국민행동요령(최종).pdf' 첨부파일" onclick="file_down('20250813/(홍보책자) 단면_2025 비상시 국민행동요령(최종).pdf', '(홍보책자) 단면_2025 비상시 국민행동요령(최종).pdf');">&nbsp;<img src="/idsiSFK/neo/ext/img_jp/board_fileicon.gif" alt="'(리플릿) 인쇄용_2025 비상시 국민행동요령 3단 양면.pdf' 첨부파일" onclick="file_down('20250813/(리플릿) 인쇄용_2025 비상시 국민행동요령 3단 양면.pdf', '(리플릿) 인쇄용_2025 비상시 국민행동요령 3단 양면.pdf');">&nbsp;</a>
+				</td>
+				
+				
+				
+			</tr><tr id="bbs_tr_3_apiData2" style="display: none;">
+				<td id="bbs_tr_3_bbs_td" colspan="5">
+					<span id="bbs_tr_3_empty">등록된 데이타가 없습니다.</span>
+				</td>
+			</tr><tr id="bbs_tr_4_apiData1">
+				<td id="bbs_tr_4_num" style="">
+					<span id="bbs_tr_4_num_td">203</span>
+				</td>
+				<td class="subject" id="bbs_tr_4_sj" style="">
+					<a id="bbs_tr_4_bbs_title" class="ellipsis" tabindex="0" href="javascript:bbsDtl('9','2677');">우주물체(코스모스482) 추락 예상관련 참고보고</a>
+					<i class="new_imgSet_icon" id="bbs_tr_4_bbs_new" style="display:none;" title="new"></i>
+					<span id="bbs_tr_4_bbs_title_file" style="display:none;font-size:17px; font-weight:bold; color:black;"><br g_index="4">70.2MB (8개 분할 압축)</span>
+				</td>
+				
+				<td id="bbs_tr_4_usr_dept_nm" style="">
+					<span id="bbs_tr_4_usr_dept_nm_td">우주위험대응과</span>
+				</td>
+				<td id="bbs_tr_4_frst_regist_dt" style="">
+					<span id="bbs_tr_4_frst_regist_dt_td">2025-05-08</span>
+				</td>
+				
+				
+				
+				<td id="bbs_tr_4_file" style="">
+					<a id="bbs_tr_4_bbs_file" class="ellipsis" tabindex="0" href="javascript:file_down('20250508/우주물체(코스모스482) 추락 예상관련 참고보고_250507.hwpx', '우주물체(코스모스482) 추락 예상관련 참고보고_250507.hwpx');"><img src="/idsiSFK/neo/ext/img_jp/board_fileicon.gif" alt="'우주물체(코스모스482) 추락 예상관련 참고보고_250507.hwpx' 첨부파일" onclick="file_down('20250508/우주물체(코스모스482) 추락 예상관련 참고보고_250507.hwpx', '우주물체(코스모스482) 추락 예상관련 참고보고_250507.hwpx');">&nbsp;</a>
+				</td>
+				
+				
+				
+			</tr><tr id="bbs_tr_4_apiData2" style="display: none;">
+				<td id="bbs_tr_4_bbs_td" colspan="5">
+					<span id="bbs_tr_4_empty">등록된 데이타가 없습니다.</span>
+				</td>
+			</tr><tr id="bbs_tr_5_apiData1">
+				<td id="bbs_tr_5_num" style="">
+					<span id="bbs_tr_5_num_td">202</span>
+				</td>
+				<td class="subject" id="bbs_tr_5_sj" style="">
+					<a id="bbs_tr_5_bbs_title" class="ellipsis" tabindex="0" href="javascript:bbsDtl('9','2676');">민간협력 무더위쉼터 목록</a>
+					<i class="new_imgSet_icon" id="bbs_tr_5_bbs_new" style="display:none;" title="new"></i>
+					<span id="bbs_tr_5_bbs_title_file" style="display:none;font-size:17px; font-weight:bold; color:black;"><br g_index="5">70.2MB (8개 분할 압축)</span>
+				</td>
+				
+				<td id="bbs_tr_5_usr_dept_nm" style="">
+					<span id="bbs_tr_5_usr_dept_nm_td">기후재난관리과</span>
+				</td>
+				<td id="bbs_tr_5_frst_regist_dt" style="">
+					<span id="bbs_tr_5_frst_regist_dt_td">2025-04-28</span>
+				</td>
+				
+				
+				
+				<td id="bbs_tr_5_file" style="">
+					<a id="bbs_tr_5_bbs_file" class="ellipsis" tabindex="0" href="javascript:file_down('20250428/민간협력 무더위쉼터 목록_배포용.xlsx', '민간협력 무더위쉼터 목록_배포용.xlsx');"><img src="/idsiSFK/neo/ext/img_jp/board_fileicon.gif" alt="'민간협력 무더위쉼터 목록_배포용.xlsx' 첨부파일" onclick="file_down('20250428/민간협력 무더위쉼터 목록_배포용.xlsx', '민간협력 무더위쉼터 목록_배포용.xlsx');">&nbsp;</a>
+				</td>
+				
+				
+				
+			</tr><tr id="bbs_tr_5_apiData2" style="display: none;">
+				<td id="bbs_tr_5_bbs_td" colspan="5">
+					<span id="bbs_tr_5_empty">등록된 데이타가 없습니다.</span>
+				</td>
+			</tr><tr id="bbs_tr_6_apiData1">
+				<td id="bbs_tr_6_num" style="">
+					<span id="bbs_tr_6_num_td">201</span>
+				</td>
+				<td class="subject" id="bbs_tr_6_sj" style="">
+					<a id="bbs_tr_6_bbs_title" class="ellipsis" tabindex="0" href="javascript:bbsDtl('9','2675');">무더위쉼터 BI 파일 안내</a>
+					<i class="new_imgSet_icon" id="bbs_tr_6_bbs_new" style="display:none;" title="new"></i>
+					<span id="bbs_tr_6_bbs_title_file" style="display:none;font-size:17px; font-weight:bold; color:black;"><br g_index="6">70.2MB (8개 분할 압축)</span>
+				</td>
+				
+				<td id="bbs_tr_6_usr_dept_nm" style="">
+					<span id="bbs_tr_6_usr_dept_nm_td">기후재난관리과</span>
+				</td>
+				<td id="bbs_tr_6_frst_regist_dt" style="">
+					<span id="bbs_tr_6_frst_regist_dt_td">2025-04-24</span>
+				</td>
+				
+				
+				
+				<td id="bbs_tr_6_file" style="">
+					<a id="bbs_tr_6_bbs_file" class="ellipsis" tabindex="0" href="javascript:file_down('20250424/붙임4. [행정안전부] 무더위쉼터02.jpg', '붙임4. [행정안전부] 무더위쉼터02.jpg');"><img src="/idsiSFK/neo/ext/img_jp/board_fileicon.gif" alt="'붙임1. 무더위쉼터 BI 사용규정.pdf' 첨부파일" onclick="file_down('20250424/붙임1. 무더위쉼터 BI 사용규정.pdf', '붙임1. 무더위쉼터 BI 사용규정.pdf');">&nbsp;<img src="/idsiSFK/neo/ext/img_jp/board_fileicon.gif" alt="'붙임2. [행정안전부] 무더위쉼터.ai' 첨부파일" onclick="file_down('20250424/붙임2. [행정안전부] 무더위쉼터.ai', '붙임2. [행정안전부] 무더위쉼터.ai');">&nbsp;<img src="/idsiSFK/neo/ext/img_jp/board_fileicon.gif" alt="'붙임3. [행정안전부] 무더위쉼터01.jpg' 첨부파일" onclick="file_down('20250424/붙임3. [행정안전부] 무더위쉼터01.jpg', '붙임3. [행정안전부] 무더위쉼터01.jpg');">&nbsp;<img src="/idsiSFK/neo/ext/img_jp/board_fileicon.gif" alt="'붙임4. [행정안전부] 무더위쉼터02.jpg' 첨부파일" onclick="file_down('20250424/붙임4. [행정안전부] 무더위쉼터02.jpg', '붙임4. [행정안전부] 무더위쉼터02.jpg');">&nbsp;</a>
+				</td>
+				
+				
+				
+			</tr><tr id="bbs_tr_6_apiData2" style="display: none;">
+				<td id="bbs_tr_6_bbs_td" colspan="5">
+					<span id="bbs_tr_6_empty">등록된 데이타가 없습니다.</span>
+				</td>
+			</tr><tr id="bbs_tr_7_apiData1">
+				<td id="bbs_tr_7_num" style="">
+					<span id="bbs_tr_7_num_td">200</span>
+				</td>
+				<td class="subject" id="bbs_tr_7_sj" style="">
+					<a id="bbs_tr_7_bbs_title" class="ellipsis" tabindex="0" href="javascript:bbsDtl('9','2674');">2025년 산불 피해 지원 안내서</a>
+					<i class="new_imgSet_icon" id="bbs_tr_7_bbs_new" style="display:none;" title="new"></i>
+					<span id="bbs_tr_7_bbs_title_file" style="display:none;font-size:17px; font-weight:bold; color:black;"><br g_index="7">70.2MB (8개 분할 압축)</span>
+				</td>
+				
+				<td id="bbs_tr_7_usr_dept_nm" style="">
+					<span id="bbs_tr_7_usr_dept_nm_td">수습지원과</span>
+				</td>
+				<td id="bbs_tr_7_frst_regist_dt" style="">
+					<span id="bbs_tr_7_frst_regist_dt_td">2025-04-08</span>
+				</td>
+				
+				
+				
+				<td id="bbs_tr_7_file" style="">
+					<a id="bbs_tr_7_bbs_file" class="ellipsis" tabindex="0" href="javascript:file_down('20250408/★2025년 산청군 산불 피해 지원안내서.pdf', '★2025년 산청군 산불 피해 지원안내서.pdf');"><img src="/idsiSFK/neo/ext/img_jp/board_fileicon.gif" alt="'★2025년 경상북도 산불 피해 지원안내서.pdf' 첨부파일" onclick="file_down('20250408/★2025년 경상북도 산불 피해 지원안내서.pdf', '★2025년 경상북도 산불 피해 지원안내서.pdf');">&nbsp;<img src="/idsiSFK/neo/ext/img_jp/board_fileicon.gif" alt="'★2025년 산청군 산불 피해 지원안내서.pdf' 첨부파일" onclick="file_down('20250408/★2025년 산청군 산불 피해 지원안내서.pdf', '★2025년 산청군 산불 피해 지원안내서.pdf');">&nbsp;</a>
+				</td>
+				
+				
+				
+			</tr><tr id="bbs_tr_7_apiData2" style="display: none;">
+				<td id="bbs_tr_7_bbs_td" colspan="5">
+					<span id="bbs_tr_7_empty">등록된 데이타가 없습니다.</span>
+				</td>
+			</tr><tr id="bbs_tr_8_apiData1">
+				<td id="bbs_tr_8_num" style="">
+					<span id="bbs_tr_8_num_td">199</span>
+				</td>
+				<td class="subject" id="bbs_tr_8_sj" style="">
+					<a id="bbs_tr_8_bbs_title" class="ellipsis" tabindex="0" href="javascript:bbsDtl('9','2673');">승강기안전 국민행동요령 포스터</a>
+					<i class="new_imgSet_icon" id="bbs_tr_8_bbs_new" style="display:none;" title="new"></i>
+					<span id="bbs_tr_8_bbs_title_file" style="display:none;font-size:17px; font-weight:bold; color:black;"><br g_index="8">70.2MB (8개 분할 압축)</span>
+				</td>
+				
+				<td id="bbs_tr_8_usr_dept_nm" style="">
+					<span id="bbs_tr_8_usr_dept_nm_td">재난정보통신과</span>
+				</td>
+				<td id="bbs_tr_8_frst_regist_dt" style="">
+					<span id="bbs_tr_8_frst_regist_dt_td">2025-03-05</span>
+				</td>
+				
+				
+				
+				<td id="bbs_tr_8_file" style="">
+					<a id="bbs_tr_8_bbs_file" class="ellipsis" tabindex="0" href="javascript:file_down('20250305/250207_승강기 국민행동요령 포스터.jpg', '250207_승강기 국민행동요령 포스터.jpg');"><img src="/idsiSFK/neo/ext/img_jp/board_fileicon.gif" alt="'250207_승강기 국민행동요령 포스터.jpg' 첨부파일" onclick="file_down('20250305/250207_승강기 국민행동요령 포스터.jpg', '250207_승강기 국민행동요령 포스터.jpg');">&nbsp;</a>
+				</td>
+				
+				
+				
+			</tr><tr id="bbs_tr_8_apiData2" style="display: none;">
+				<td id="bbs_tr_8_bbs_td" colspan="5">
+					<span id="bbs_tr_8_empty">등록된 데이타가 없습니다.</span>
+				</td>
+			</tr><tr id="bbs_tr_9_apiData1">
+				<td id="bbs_tr_9_num" style="">
+					<span id="bbs_tr_9_num_td">198</span>
+				</td>
+				<td class="subject" id="bbs_tr_9_sj" style="">
+					<a id="bbs_tr_9_bbs_title" class="ellipsis" tabindex="0" href="javascript:bbsDtl('9','2672');">공연장 안전 국민행동요령 자료</a>
+					<i class="new_imgSet_icon" id="bbs_tr_9_bbs_new" style="display:none;" title="new"></i>
+					<span id="bbs_tr_9_bbs_title_file" style="display:none;font-size:17px; font-weight:bold; color:black;"><br g_index="9">70.2MB (8개 분할 압축)</span>
+				</td>
+				
+				<td id="bbs_tr_9_usr_dept_nm" style="">
+					<span id="bbs_tr_9_usr_dept_nm_td">재난정보통신과</span>
+				</td>
+				<td id="bbs_tr_9_frst_regist_dt" style="">
+					<span id="bbs_tr_9_frst_regist_dt_td">2025-03-05</span>
+				</td>
+				
+				
+				
+				<td id="bbs_tr_9_file" style="">
+					<a id="bbs_tr_9_bbs_file" class="ellipsis" tabindex="0" href="javascript:file_down('20250305/3.안전한 공연 관람을 위한 관람객 행동요령.pdf', '3.안전한 공연 관람을 위한 관람객 행동요령.pdf');"><img src="/idsiSFK/neo/ext/img_jp/board_fileicon.gif" alt="'3.안전한 공연 관람을 위한 관람객 행동요령.pdf' 첨부파일" onclick="file_down('20250305/3.안전한 공연 관람을 위한 관람객 행동요령.pdf', '3.안전한 공연 관람을 위한 관람객 행동요령.pdf');">&nbsp;</a>
+				</td>
+				
+				
+				
+			</tr><tr id="bbs_tr_9_apiData2" style="display: none;">
+				<td id="bbs_tr_9_bbs_td" colspan="5">
+					<span id="bbs_tr_9_empty">등록된 데이타가 없습니다.</span>
+				</td>
+			</tr></tbody>
+	</table>
+</div>
+
+
+<div class="board_bottomWrap">
+	<div class="paging_bottomItem">
+		<a class="paging_btn" tabindex="0" onclick="onPrevPageBtnClick(); return false;"><span class="prevPaging_imgSet_icon"><i class="ir">이전</i></span></a>
+		<div class="numberPaging_wrap">
+			<span id="minPage" class="nowNum">1</span>/<span id="maxPage">21</span>
+		</div>
+		<a class="paging_btn" tabindex="0" onclick="onNextPageBtnClick(); return false;"><span class="nextPaging_imgSet_icon"><i class="ir">다음</i></span></a>
+		<input type="number" class="paging_input" id="bbs_page" title="페이징 넘버 입력">
+		<a class="go_btn" tabindex="0" onclick="onGoToPageBtnClick()">이동</a>
+		<a class="blue_btn" tabindex="0" id="registBtn" style="margin-left:20px;display:none;" href="http://www.epeople.go.kr">등록</a>
+	</div>
+</div>
+</div>	
+</div>
+
+
+
+<script src="/idsiSFK/neo/ext/js/page/work_footer.js" defer=""></script>
+<!-- 공공누리 저작권 표기 -->
+<div style="position: relative;width: 1200px;margin: 0 auto;padding-bottom: 60px;padding-top: 30px;">
+
+	<img src="/idsiSFK/neo/ext/img/ccc_20200604.gif" alt="공공누리 공공저작물 자유이용허락" style="float: left; width: 19%; vertical-align: top; line-height: 0; font-size: 0"><span style="margin: 20px;"><b style="color: #2796e5;">행정안전부</b>가 창작한
+		국민재난안전포털 저작물은 "공공누리" <b style="color: #2796e5;">출처표시-상업적이용금지-변경금지</b>
+		조건에 따라 이용 할 수 있습니다.</span>
+</div>
+
+<!-- footer -->
+<div class="footer">
+    <div class="inner">
+        <div class="footmenu">
+            <ul class="guidemenu">
+                <!-- <li><a href="/idsiSFK/neo/sfk/cs/contents/help/SDIJKM7102.html?menuSeq=336">사이트이용안내</a></li> -->
+                <li><a href="/idsiSFK/neo/sfk/cs/csc/bbs_conf.jsp?menuSeq=689&amp;bbs_no=5" tabindex="0">공지사항</a></li>
+                <li><a href="/idsiSFK/neo/sfk/cs/csc/bbs_conf.jsp?menuSeq=693&amp;bbs_no=7" tabindex="0">자주묻는 질문</a></li>
+                <li><a title="새창열림" href="http://www.mois.go.kr/frt/sub/a07/orgranFunction/screen.do" target="_blank" tabindex="0">부서별연락처</a></li>
+                <li><a href="/idsiSFK/neo/sfk/cs/contents/help/SDIJKM7102.html?menuSeq=336" style="color: blue;" tabindex="0">개인정보처리방침</a></li>
+                <!-- <li><a href="/idsiSFK/neo/sfk/cs/csc/sitemapSearch.html?menuSeq=343">사이트맵</a></li>
+                <li><a href="#" onclick="helpMenuView();return false;">안내도우미</a></li>
+                <li>
+                	<div id="layerbox" class="layerbox guidemenubox layer">
+						<ul class="submenu">
+							<li><a href="#none">재난안전정보</a>
+								<ul class="subsubmenu">
+									<li><a href="/idsiSFK/neo/sfk/cs/csc/bbs_conf.jsp?menuSeq=689&bbs_no=5">공지사항</a></li>
+									<li><a href="/idsiSFK/neo/sfk/cs/csc/bbs_conf.jsp?menuSeq=693&bbs_no=7">자주 묻는 질문</a></li>
+									<li><a href="/idsiSFK/neo/sfk/cs/csc/bbs_conf.jsp?menuSeq=593&bbs_no=9">자료실</a></li>
+									<li><a href="http://www.mois.go.kr/frt/a05/selectLawInfList.do?lawordse=01" target="_blank" title="새창열림">법령정보</a></li>
+								</ul>
+							</li>
+							<li><a href="#none">사이트이용안내</a>
+								<ul class="subsubmenu">
+									<li><a href="/idsiSFK/neo/sfk/cs/contents/help/SDIJKM7102.html?menuSeq=336">개인정보처리방침</a></li>
+									<li><a href="/idsiSFK/neo/sfk/cs/contents/help/SDIJKM7103.html?menuSeq=337">웹접근성안내</a></li>
+									<li><a href="/idsiSFK/neo/sfk/cs/contents/help/SDIJKM7104.html?menuSeq=338">뷰어프로그램</a></li>
+									<li><a href="/idsiSFK/neo/sfk/cs/contents/help/SDIJKM7105.html?menuSeq=339">장애인이용안내</a></li>
+								</ul>
+							</li>
+							<li><a href="#none">사이트맵</a>
+								<ul class="subsubmenu">
+									<li><a href="/idsiSFK/neo/sfk/cs/csc/sitemapSearch.html?menuSeq=343">ㄱㄴㄷ 색인</a></li>
+								</ul>
+							</li>
+							<li><a href="#none">통합검색</a>
+								<ul class="subsubmenu">
+									<li><a href="#" onclick="goToSearchPage();return false;">통합검색</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>//layerbox
+                </li> -->
+            </ul>
+            <ul class="systemlink">
+                <li><a title="재난훈련관리 사이트 새창 링크" href="/idsiSFK/index_traing.jsp" target="_blank" tabindex="0"><span class="icon_c imgset"></span>재난훈련관리</a></li>
+                <!-- <li><a title="방재관리대행자 사이트 새창 링크" href="/idsiSFK/index_ch.jsp" target="_blank"><span class="icon_c imgset"></span>방재관리대행자</a></li> -->
+            </ul>
+        </div>
+
+       <div class="logo" style="text-align: center;float:right;">
+			<div class="logo" style="text-align: center;float:left;"><span class=""><img src="/idsiSFK/neo/main/amblum_02.png" alt="국가대표브랜드 CBEI1 브랜드"></span></div>
+			<div class="logo" style="text-align: center;float:left;">
+				<span class="">
+					<a title="새창" href="https://www.wa.or.kr/board/list.asp?search=total&amp;SearchString=%B1%B9%B9%CE%C0%E7%B3%AD%BE%C8%C0%FC%C6%F7%C5%D0&amp;BoardID=0006" target="_blank" tabindex="0">
+						<img src="/idsiSFK/neo/ext/img/wa.gif" alt="(사)한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크(WA마크)" style="margin-left: 10px;width: 93px;height: 63px;">
+					</a>
+				</span>
+			</div>			
+			<div class="logo" style="text-align: center;margin: 12px;float:left;"><span class="copy_logo imgset_main" title="행정안전부">행정안전부</span></div>
+		</div>
+
+        <p class="w2textbox copyright">Copyright 2016 Ministry of the Interior and Safety. All rights reserved.<br>국민재난안전포털에서 제공하는 자료는 공익목적으로만 사용해야하며 상업목적으로 사용할 경우 저작권을 침해합니다.</p>
+        <p class="w2textbox address">30112 세종특별자치시 도움6로 42 (어진동)&nbsp;&nbsp;홈페이지운영/장애문의 : 044-205-8461/044-205-8462<br>민방위문의 : 시군구청 담당자 <a class="btn_go" href="/idsiSFK/neo/sfk/cs/cvi/cvc/cilcontactList.jsp?menuSeq=51" tabindex="0">바로가기</a></p>
+        <span class="w2span scrolltop imgset">상단으로</span>
+    </div>
+</div>
+<script>
+	function helpMenuView() {
+		if($("#layerbox").css("display") == "block")
+			$("#layerbox").css("display", "none");
+		else if($("#layerbox").css("display") == "none")
+			$("#layerbox").css("display", "block");
+	}
+
+	function goToSearchPage() {
+		if(menuDataList[0].SERVER_STATUS != "Y") {
+			alert("현재 접속자 수가 폭주하여 일시 대기 중인 상태입니다.");
+			
+			return;
+		}
+		
+		location.href = "/idsiSFK/neo/sfk/cs/csc/searchTotal.jsp?menuSeq=603";
+	}
+</script>
+	
+
+
+<div><script>
+var tmpDownloadScript = "";
+//**************************************************************************
+//DataMap
+//**************************************************************************
+var neoSafeKoreaSubDataMapList = [
+		//****************************************
+		// comCodeSearch
+		//****************************************
+		{
+			id : "comCodeSearch",
+			data : {
+				  searchCdKey : ""
+			}
+		}
+];
+
+
+//**************************************************************************
+//DataList
+//**************************************************************************
+var neoSafeKoreaSubDataListList = [
+		{ id:"amendmentCodeList1" },
+		{ id:"disasterACodeList1" },
+		{ id:"disasterBCodeList1" },
+		{ id:"DelYnList" },
+		{ id:"bbsList" }
+];
+
+
+//**************************************************************************
+//Submission
+//**************************************************************************
+var neoSafeKoreaSubSubmissionList = [
+
+   		//******************************************************************
+  		// getDisasterAComCdInfo_submission
+  		//******************************************************************
+  		{
+  			  id          : "getDisasterAComCdInfo_submission"
+  			//, submiterror : getCdInfo_submission_submiterror
+  			, submitdone  : getDisasterAComCdInfo_submission_submitdone
+  			, processMsg  : "조회중입니다..."
+  			, mode        : "asynchronous"
+  			, ref         : {"id":"comCodeSearch","action":"select","key":"searchInfo"}
+  			, target      : [{"id":"codeInfo","key":"cd_info"},{"id":"disasterACodeList1","key":"cd_list"}]
+  			, action      : "/idsiSFK/sfk/ca/cma/getComCdList.do"
+  			, encoding    : "UTF-8"
+  			, method      : "post"
+  			, mediatype   : "application/json"
+  		},
+
+		//******************************************************************
+		// getDisasterBComCdInfo_submission
+		//******************************************************************
+		{
+			  id          : "getDisasterBComCdInfo_submission"
+			//, submiterror : getCdInfo_submission_submiterror
+			, submitdone  : getDisasterBComCdInfo_submission_submitdone
+			, processMsg  : "조회중입니다..."
+			, mode        : "asynchronous"
+			, ref         : {"id":"comCodeSearch","action":"select","key":"searchInfo"}
+			, target      : [{"id":"codeInfo","key":"cd_info"},{"id":"disasterBCodeList1","key":"cd_list"}]
+			, action      : "/idsiSFK/sfk/ca/cma/getComCdList.do"
+			, encoding    : "UTF-8"
+			, method      : "post"
+			, mediatype   : "application/json"
+		},
+
+		//******************************************************************
+		// getAmendmentComCdInfo_submission
+		//******************************************************************
+		{
+			  id          : "getAmendmentComCdInfo_submission"
+			//, submiterror : getCdInfo_submission_submiterror
+			, submitdone  : getAmendmentComCdInfo_submission_submitdone
+			, processMsg  : "조회중입니다..."
+			, mode        : "asynchronous"
+			, ref         : {"id":"comCodeSearch","action":"select","key":"searchInfo"}
+			, target      : [{"id":"codeInfo","key":"cd_info"},{"id":"amendmentCodeList1","key":"cd_list"}]
+			, action      : "/idsiSFK/sfk/ca/cma/getComCdList.do"
+			, encoding    : "UTF-8"
+			, method      : "post"
+			, mediatype   : "application/json"
+		},
+
+		//******************************************************************
+		// getBbsSelect_submission
+		//******************************************************************
+		{
+			  id         : "getBbsSelect_submission"
+			, processMsg  : "조회중입니다..."
+			, submitdone : getBbsSelect_submitdone
+			, mode       : "asynchronous"
+			, ref        : {"id":"bbs_searchInfo","key":"bbs_searchInfo"}
+			, target     : [{"id":"bbsList","key":"bbsList"},{"id":"dm_resultMap","key":"rtnResult"}]
+			, action     : "/idsiSFK/bbs/user/selectBbsList.do"
+			, encoding   : "UTF-8"
+			, method     : "post"
+			, mediatype  : "application/json"
+		}
+];
+
+
+$(function(){
+	safeKoreaEngineInitializeDataMap(neoSafeKoreaSubDataMapList);
+	safeKoreaEngineInitializeDataList(neoSafeKoreaSubDataListList);
+	safeKoreaEngineInitializeSubmission(neoSafeKoreaSubSubmissionList);
+	
+	$('#contents a').attr('tabindex', 0);
+	$('body input[type=radio]').attr('tabindex', 0);
+	
+	//enter 이벤트 추가
+	$('body a').on('keydown', function(event) {
+		if (event.keyCode == 13) {
+			if ($(this).children().length != 0) {//a태그에 하위태그가 존재 할 경우
+				$(this).children().eq(0).click();
+			} else {
+				$(this).click();
+			}
+		}
+	});
+	
+	$('body input[type=radio]').on('keydown', function(event) {
+		if (event.keyCode == 13) {
+			$(this).click();
+		}
+	});
+	$('body input[type=checkbox]').on('keydown', function(event) { //체크 박스 이벤트
+		if (event.keyCode == 13) {
+			$(this).click();
+		}
+	});
+	
+	//2024웹접근성 추가
+	$('.navi_link').attr('tabindex','-1');
+});
+
+//**************************************************************************
+//
+//**************************************************************************
+
+	var bbs_no = null;
+	
+	$(function(){
+		//wframe 사용으로 bbs_conf_user_list.xml 파일 bbs_searchInfo 사용
+		bbs_no = bbs_searchInfo.get('bbs_no');
+		initPage();
+	});
+			
+	//초기화
+	function initPage(){		
+		NeoSafeKoreaGenerator.call(document.getElementById("bbs_col"));
+		NeoSafeKoreaGenerator.call(document.getElementById("bbs_th"));
+		NeoSafeKoreaGenerator.call(document.getElementById("bbs_tr"));
+		
+		search_type_v.setValue( bbs_searchInfo.get( "search_type_v" ) );
+		search_val_v.setValue( bbs_searchInfo.get( "search_val_v" ) );
+		search_start.setValue( bbs_searchInfo.get( "search_start" ) );
+		search_end.setValue( bbs_searchInfo.get( "search_end"	 ) );
+		bbs_page.setValue( bbs_searchInfo.get( "pageIndex" ) );
+		
+		if(bbsConfMap.get( "dstr_ty_use_at" ) == 'N'){//재난
+			$("#disasterYnTr").remove();
+			search_disaster_li.setStyle( "display" , "none" );
+		}
+		else{
+			//공통 코드 재난 유형
+		    comCodeSearch.set("searchCdKey" , "C_OCRC_TYPE");		
+		    getDisasterAComCdInfo_submission.exec();
+		    search_disaster_li.setStyle("display" , "");    
+		}
+		
+		if(bbsConfMap.get( "estb_reform_dy_use_at" ) == 'N'){//재정&개정
+			$("#amendmentYnTr").remove();
+			search_amendment_li.setStyle("display" , "none");
+		}
+		else{
+			search_amendment_li.setStyle( "display" , "" );
+			//공통 코드 제ㆍ개정
+			comCodeSearch.set( "searchCdKey", "JT0000");		
+		    getAmendmentComCdInfo_submission.exec();
+		}
+		
+		bbs_searchInfo.set("pageUnit", bbsConfMap.get("bbs_list_outpt_cnt"));
+		getBbsSelect_submission.exec();
+		
+		//자주묻는질문, 자주묻는질문(풍수해보험) 검색조건
+		if(bbs_searchInfo.get("bbs_no")==7||bbs_searchInfo.get("bbs_no")==21){
+			test.setStyle("display","none");
+		}
+		
+		//웹 개방성 때문에 상세페이지에서 다시 목록으로 나왔을경우 상세페이지 URL이 잔존하여 그부분을 삭제하기 위해 사용
+		var location_URL = window.location.href.split('&viewtype');
+		history.pushState(null, null, location_URL[0]);
+	}
+	
+	function getDisasterAComCdInfo_submission_submitdone(e) {
+		var data = disasterACodeList1.getAllJSON();
+		
+		search_disaster_a.removeAll();
+		
+		for(var i=0; i<data.length; i++){
+			var objOption = document.createElement("option");   
+			objOption.value = data[i]["cdKey"];
+			objOption.text  = data[i]["cdNm"];
+			search_disaster_a.options.add(objOption);
+		}
+		
+		search_disaster_a.setValue( bbs_searchInfo.get( "search_disaster_a" ) );
+		comCodeSearch.set( "searchCdKey" , bbs_searchInfo.get( "search_disaster_a" ) );	
+		
+		if(!CommonUtil.isNull(search_disaster_a.getValue()))
+			getDisasterBComCdInfo_submission.exec();
+	}
+	
+	function getDisasterBComCdInfo_submission_submitdone(e) {
+		var data = disasterBCodeList1.getAllJSON();
+		
+		search_disaster_b.removeAll();
+		
+		for(var i=0; i<data.length; i++){
+			var objOption = document.createElement("option");   
+			objOption.value = data[i]["cdKey"];
+			objOption.text  = data[i]["cdNm"];
+			search_disaster_b.options.add(objOption);
+		}
+		
+		search_disaster_b.setValue( bbs_searchInfo.get( "search_disaster_b" ) );
+	}
+	
+	function getAmendmentComCdInfo_submission_submitdone(e) {
+		var data = amendmentCodeList1.getAllJSON();
+		
+		search_amendment.removeAll();
+		
+		for(var i=0; i<data.length; i++){
+			var objOption = document.createElement("option");   
+			objOption.value = data[i]["cdKey"];
+			objOption.text  = data[i]["cdNm"];
+			search_amendment.options.add(objOption);
+		}
+		
+		search_amendment.setValue( bbs_searchInfo.get( "search_amendment" ) );
+	}
+			
+	//리스트 콜백
+	function getBbsSelect_submitdone(e) {
+		var pageSizeChk = parseInt(dm_resultMap.get( "pageSize" )) ;
+		var i = parseInt(bbs_page.getValue());
+		
+		totCnt.setValue(dm_resultMap.get("totCnt"));
+		
+		if(0 < i && i <= pageSizeChk){
+			bbs_searchInfo.set("pageIndex", i);
+			minPage.setValue(i);
+			bbs_page.setValue(i);
+		}
+		else{	
+			bbs_searchInfo.set("pageIndex", 1);
+			bbs_page.setValue("1");
+		}
+
+		// 페이징 시작
+		bbs_searchInfo.set( "pageSize" , dm_resultMap.get( "pageSize" ) );
+		minPage.setValue( bbs_searchInfo.get( "pageIndex" ) );
+		maxPage.setValue( bbs_searchInfo.get( "pageSize" ) );
+		bbs_page.setValue( bbs_searchInfo.get( "pageIndex" ) );
+		// 페이징 끝
+			
+		// 보여줄 컬럼
+		var sj_use_list_cn = bbsConfMap.get( 'sj_use_list_cn' ).split(' ');
+		bbs_col.removeAll();
+		bbs_th.removeAll();
+		
+		colListTmp = sj_use_list_cn;
+
+		var colObj = {
+			 "num" : "번호"
+			,"sj" : "제목"
+			,"usr_nm" : "작성자"
+			,"usr_dept_nm" : "부서"
+			,"frst_regist_dt" : "등록일"
+			,"dstr_ty_b_cd_nm" : "재난유형"
+			,"usr_expsr_at_nm" : "공개여부"
+			,"cfm_at_nm" : "승인여부"
+			,"file" : "첨부"
+			,"qry_cnt" : ""
+			,"estb_reform_nm" : "제ㆍ개정일"
+		};
+
+		colList = colListTmp.map(function(v){		
+			return colObj[v];
+		});
+	
+		$('.boardList_table').children('caption').text($('.level1_title').text() + ' 목록 - ' + colList.join(', '));
+	
+		//헤더 리스트
+		for ( i = 0 ; i < sj_use_list_cn.length ; i++) {
+			//공개여부 미노출
+			if( sj_use_list_cn[i] != "usr_expsr_at_nm"){
+				//승인여부 미노출
+				if(sj_use_list_cn[i] != "cfm_at_nm"){
+					var index_col = bbs_col.insert();
+					var index_th = bbs_th.insert();
+					bbs_col.getChild(index_col, "bbs_col_width").setStyle( "width" , bbsTitleColSize(sj_use_list_cn[i])+"%" );
+					//sj_use_list_cn = ['num','sj','usr_nm','usr_dept_nm','frst_regist_dt','qry_cnt']
+					bbs_th.getChild(index_th, "bb_header_title").setValue( bbsTitleNm(sj_use_list_cn[i]) );
+					console.log(sj_use_list_cn);
+					
+				}
+			}
+		}
+		
+		bbs_tr.removeAll();
+			
+		if(bbsList.getRowCount() > 0){
+			//데이터 리스트
+			for(var i =0 ; i < bbsList.getRowCount() ; i ++){
+				var index_tr = bbs_tr.insert();
+
+				$("[id^=bbs_col_]").removeAttr("g_index");
+				$("[id^=bbs_th_]").removeAttr("g_index");
+				$("[id^=bbs_tr_]").removeAttr("g_index");
+				
+				bbs_tr.getChild(index_tr, "apiData1").setStyle( "display" , "" );
+				bbs_tr.getChild(index_tr, "apiData2").setStyle( "display" , "none" );
+				
+						//debugger;//notice_matter_at
+				for ( j = 0 ; j < sj_use_list_cn.length ; j++) {
+					if(sj_use_list_cn[j] =="num"){//번호
+						bbs_tr.getChild(index_tr, "num").setStyle( "display" , "" );
+						bbs_tr.getChild(index_tr, "num_td").setValue(bbsList.getCellData( i , sj_use_list_cn[j] ));
+						//2024 공지추가
+						/*
+						if(bbsList.data[i].notice_matter_at == 'Y'){
+							bbs_tr.getChild(index_tr, "num_td").setValue('공지');
+							bbs_tr.getChild(index_tr, "num_td").setStyle('font-weight','bold');
+						}
+						*/
+					}
+					else if(sj_use_list_cn[j] =="sj"){//제목
+						bbs_tr.getChild(index_tr, "sj").setStyle( "display" , "" );
+						var bbs_href= "javascript:bbsDtl(\'"+bbsList.getCellData( i , "bbs_no" ) +"\',\'"+bbsList.getCellData( i , "bbs_ordr" ) +"\');";
+						bbs_tr.getChild(index_tr, "bbs_title").setHref(bbs_href);
+						
+						if(bbs_searchInfo.get("bbs_no") == 63){
+							var cnText = bbsList.getCellData( i , 'cn' );
+	         				bbs_tr.getChild(index_tr, "bbs_title").setValue( bbsList.getCellData( i , sj_use_list_cn[j] ) + cnText.substring(cnText.indexOf('['), cnText.indexOf(']')+1) );
+						}
+						// 2024.02.02 han
+						// 민방위 자료실 첨부파일 보기
+						else if(bbs_no == 10) {
+							bbs_tr.getChild(index_tr, "bbs_title").setValue( bbsList.getCellData( i , sj_use_list_cn[j] ) );
+
+							var file_data = bbsList.getCellData(i, "file_list");
+							var file_cnt  = bbsList.getCellData(i, "file_cnt");
+							var tot_file_size = 0;
+
+							// 첨부파일이 2개 이상인 경우에 실행
+							if(file_cnt > 1) {
+								for (f = 0 ; f < file_cnt ; f++) {
+									var file_co = file_list(f, " file_co", file_data);
+									tot_file_size += Number(file_co);
+								}
+								tot_file_size = Math.round(tot_file_size * 10 / 1024 / 1024) / 10
+								bbs_tr.getChild(index_tr, "bbs_title_file").setStyle( "display" , "" );
+								bbs_tr.getChild(index_tr, "bbs_title_file").setValue('<br>' + tot_file_size + 'MB (' + file_cnt + '개 분할)');
+							}
+						}
+	         			else
+	         				bbs_tr.getChild(index_tr, "bbs_title").setValue( bbsList.getCellData( i , sj_use_list_cn[j] ) );
+	         			
+	         			var today1 = new Date();
+						var today2 = new Date(bbsList.getCellData( i , "frst_regist_dt"));
+						today1.setDate(today1.getDate() - Number(bbsConfMap.get( 'bbs_new_daycnt' )));
+						if(today1 <= today2){
+							bbs_tr.getChild(index_tr, "bbs_new").setStyle( "display" , "" );
+						}
+					}
+					else if(sj_use_list_cn[j] =="usr_nm"){//작성자
+						bbs_tr.getChild(index_tr, "usr_nm").setStyle( "display" , "" );
+					
+						if(bbs_no == "73") {
+							var tmpNm = bbsList.getCellData( i , sj_use_list_cn[j] );
+							
+							var name = tmpNm.substring(0, 1);
+							for(var k = 0; k < tmpNm.length-1; k++) {
+								name += "*";
+							}
+							
+							bbs_tr.getChild(index_tr, "usr_nm_td").setValue(name);
+							
+							$("#registBtn").css("display", "inline-block");
+						} else {
+							bbs_tr.getChild(index_tr, "usr_nm_td").setValue(bbsList.getCellData( i , sj_use_list_cn[j] ));
+						}
+					}
+					else if(sj_use_list_cn[j] =="usr_dept_nm"){//부서
+						bbs_tr.getChild(index_tr, "usr_dept_nm").setStyle( "display" , "" );
+						bbs_tr.getChild(index_tr, "usr_dept_nm_td").setValue(bbsList.getCellData( i , sj_use_list_cn[j] ));
+						if(bbs_no == '17'){ //재난상식
+							bbs_tr.getChild(index_tr, "usr_dept_nm_td").setValue(bbsList.getCellData( i , "" ));
+						}
+					}
+					else if(sj_use_list_cn[j] =="frst_regist_dt"){//작성날짜
+						bbs_tr.getChild(index_tr, "frst_regist_dt").setStyle( "display" , "" );
+						bbs_tr.getChild(index_tr, "frst_regist_dt_td").setValue(bbsList.getCellData( i , sj_use_list_cn[j] ));
+					}
+					else if(sj_use_list_cn[j] =="dstr_ty_b_cd_nm"){//재난유형
+						bbs_tr.getChild(index_tr, "dstr_ty_b_cd_nm").setStyle( "display" , "" );
+						bbs_tr.getChild(index_tr, "dstr_ty_b_cd_nm_td").setValue(bbsList.getCellData( i , sj_use_list_cn[j] ));
+						
+					}
+					else if(sj_use_list_cn[j] =="usr_expsr_at_nm"){//공개여부
+						//bbs_tr.getChild(index_tr, "usr_expsr_at_nm").setStyle( "display" , "" );
+						//bbs_tr.getChild(index_tr, "usr_expsr_at_nm_td").setValue(bbsList.getCellData( i , sj_use_list_cn[j] ));
+					}
+					else if(sj_use_list_cn[j] =="cfm_at_nm"){//승인여부
+						//bbs_tr.getChild(index_tr, "cfm_at_nm").setStyle( "display" , "" );
+						//bbs_tr.getChild(index_tr, "cfm_at_nm_td").setValue(bbsList.getCellData( i , sj_use_list_cn[j] ));
+					}
+					else if(sj_use_list_cn[j] =="file"){//파일
+						bbs_tr.getChild(index_tr, "file").setStyle( "display" , "" );
+	         			bbs_tr.getChild(index_tr, "bbs_file").setValue( file_html(i) );
+	         			
+	         			bbs_tr.getChild(index_tr, "bbs_file").setHref( tmpDownloadScript );
+	         			
+	         			//2025 웹접근성 조치 파일없으면 링크도 없음
+	         			if(file_html(i) == ""){
+	         				bbs_tr.getChild(index_tr, "bbs_file").remove();
+	         			}
+	         			
+					}
+					else if(sj_use_list_cn[j] =="qry_cnt"){//조회수
+						bbs_tr.getChild(index_tr, "qry_cnt").setStyle( "display" , "none" );
+						bbs_tr.getChild(index_tr, "qry_cnt_td").setValue(bbsList.getCellData( i , sj_use_list_cn[j] ));
+					}
+					else if(sj_use_list_cn[j] =="estb_reform_nm"){//제ㆍ개정
+						bbs_tr.getChild(index_tr, "estb_reform_nm").setStyle( "display" , "" );
+						bbs_tr.getChild(index_tr, "estb_reform_nm_td").setValue(bbsList.getCellData( i , sj_use_list_cn[j] ));
+					}
+					else if(sj_use_list_cn[j] =="rgr_rgr_reform_de"){//제ㆍ개정일
+						bbs_tr.getChild(index_tr, "rgr_rgr_reform_de").setStyle( "display" , "" );
+						bbs_tr.getChild(index_tr, "rgr_rgr_reform_de_td").setValue(bbsList.getCellData( i , sj_use_list_cn[j] ));
+					}
+				}
+				
+				var k = 0;
+				var obj = $(bbs_tr.getChild(index_tr, "apiData1"));
+				
+				while(k < obj.children().size()) {					
+					if(obj.children().eq(k).css("display") == "none") {
+						obj.children().eq(k).remove();
+					} else {
+						k++;
+					}
+				}
+			}
+		}
+		else{
+			var index_tr = bbs_tr.insert();
+
+			$("[id^=bbs_col_]").removeAttr("g_index");
+			$("[id^=bbs_th_]").removeAttr("g_index");
+			$("[id^=bbs_tr_]").removeAttr("g_index");
+			
+			bbs_tr.getChild(index_tr, "apiData1").setStyle( "display" , "none" );
+			bbs_tr.getChild(index_tr, "apiData2").setStyle( "display" , "" );
+			
+			// bbs_tr_0_ 는 generator id 와 index 번호가 붙음.
+			$("#bbs_tr_0_bbs_td").attr("colspan", sj_use_list_cn.length);
+		}
+	}
+			
+	//리스트 컬럼명
+	function bbsTitleNm(str){
+		var title = (str=="num"            ) ? "번호":
+		            (str=="sj"             ) ? "제목":
+		            (str=="usr_nm"         ) ? "작성자":
+		            (str=="usr_dept_nm"    ) ? "부서":
+		            (str=="frst_regist_dt" ) ? "등록일":
+		            (str=="dstr_ty_b_cd_nm") ? "재난유형":
+		            (str=="usr_expsr_at_nm") ? "공개여부":
+		            (str=="cfm_at_nm"      ) ? "승인여부":
+		            (str=="file"           ) ? "첨부":
+		            (str=="qry_cnt"        ) ? "":
+		            (str=="estb_reform_nm" ) ? "제ㆍ개정":"제ㆍ개정일";
+		if(bbs_no == '17' && str=="usr_dept_nm"){	// 재난상식
+			title = "";
+		}
+		
+		return title;
+	}
+	
+	//리스트 컬럼명 사이즈
+	function bbsTitleColSize(str){
+		var title = (str=="num"            ) ? "8":  // 번호 num               
+		            (str=="sj"             ) ? "30": // 제목 sj                
+		            (str=="usr_nm"         ) ? "10": // 작성자 usr_nm           
+		            (str=="usr_dept_nm"    ) ? "10": // 부서 usr_dept_cd       
+		            (str=="frst_regist_dt" ) ? "10": // 작성날짜 frst_regist_dt  
+		            (str=="dstr_ty_b_cd_nm") ? "10": // 재난유형 dstr_ty_b_cd    
+		            (str=="usr_expsr_at_nm") ? "8":  // 공개여부 usr_expsr_at    
+		            (str=="cfm_at_nm"      ) ? "8":  // 승인여부 cfm_at          
+		            (str=="file"           ) ? "10": // 첨부 file              
+		            (str=="qry_cnt"        ) ? "8":  // 조회수 qry_cnt          
+		            (str=="estb_reform_nm" ) ? "10":"10"; //제ㆍ개정 : 제ㆍ개정일 estb_reform_cd : rgr_rgr_reform_de
+		            
+		if(bbs_no == 74){            
+	      	title = (str=="num"            ) ? "10":  // 번호 num               
+		            (str=="sj"             ) ? "60": // 제목 sj                
+		            (str=="usr_nm"         ) ? "20": // 작성자 usr_nm           
+		            (str=="usr_dept_nm"    ) ? "10": // 부서 usr_dept_cd       
+		            (str=="frst_regist_dt" ) ? "20": // 작성날짜 frst_regist_dt  
+		            (str=="dstr_ty_b_cd_nm") ? "10": // 재난유형 dstr_ty_b_cd    
+		            (str=="usr_expsr_at_nm") ? "8":  // 공개여부 usr_expsr_at    
+		            (str=="cfm_at_nm"      ) ? "8":  // 승인여부 cfm_at          
+		            (str=="file"           ) ? "10": // 첨부 file              
+		            (str=="qry_cnt"        ) ? "0":  // 조회수 qry_cnt          
+		            (str=="estb_reform_nm" ) ? "0":"0"; //제ㆍ개정 : 제ㆍ개정일 estb_reform_cd : rgr_rgr_reform_de           
+		}			            
+			            
+			            
+		if(bbs_no == '17'){ // 재난상식
+			if(str=="sj"){
+				title = "39";
+			}
+			else if(str=="usr_dept_nm"){
+				title = "1";
+			}
+		}
+		            
+		return title;
+	}
+	
+	//상세 페이지 이동
+	function bbsDtl(bbs_no , bbs_ordr){
+		if(parseInt(bbsConfMap.get( 'blts_dtl_qry_athr_value' )) < 98){
+			alert("권한이 필요합니다.");
+			return false;
+		}
+
+		//wframe 사용으로 bbs_conf_user_list.xml 파일 bbs_searchInfo 사용
+		bbs_searchInfo.set("bbs_no",   bbs_no);   // 게시판 번호
+		bbs_searchInfo.set("bbs_ordr", bbs_ordr); // 게시 내용 번호
+		bbs_searchInfo.set("opCode",   "2" );     // 1번:등록 2번:수정
+		var path ="/idsiSFK/neo/sfk/cs/csc/" + bbsConfMap.get('ty_cd') + "_user_detail.jsp";				
+
+		contents.setSrc(path);
+	}
+
+	//검색
+	function fn_search() {
+		//글 상세조회 권한
+		if(parseInt(bbsConfMap.get("sntnc_list_athr_value")) > 98 ){
+			if(!CommonUtil.isNull(search_start.getValue()) && !CommonUtil.isNull(search_end.getValue())){
+				//날짜 전후 비교
+				if(!valLib.compareDate( search_start.getValue() , search_end.getValue() , 4, "시작일자", "종료일자" )){
+					search_start.focus();
+					return false;
+				}
+				
+			}
+
+			bbs_searchInfo.set("search_type_v", search_type_v.getValue());
+			bbs_searchInfo.set("search_val_v", search_val_v.getValue());					
+			getBbsSelect_submission.exec();
+		}
+		else{
+			alert("권한이 필요합니다.");
+		} 
+	}
+			
+	//파일 다운로드
+	function file_down(water_li_file_nm, file_nm) {
+		CommonUtil.downloadSfkBbsFile(encodeURIComponent( water_li_file_nm), encodeURIComponent(file_nm));
+	}
+			
+	// 파일 리스트 html 코딩
+	function file_html(i){
+		var file_data = bbsList.getCellData(i, "file_list");
+		var file_cnt  = bbsList.getCellData(i, "file_cnt");
+		var html_file ="";
+		for (f=0 ; f < file_cnt ; f++) {
+			var water_li_file_nm = file_list(f, " water_li_file_nm", file_data);
+			var file_nm          = file_list(f, " file_nm",          file_data);
+			var file_ty_value    = file_list(f, " file_ty_value",    file_data);
+			html_file +="<img src=\"/idsiSFK/neo/ext/img_jp/board_fileicon.gif\" alt=\"'" + file_nm + "' 첨부파일\" onclick=\"file_down('" + water_li_file_nm.replace('\\','/') + "', '" + file_nm + "');\" >&nbsp;";
+			tmpDownloadScript = "javascript:file_down('" + water_li_file_nm.replace('\\','/') + "', '" + file_nm + "');";
+		}	
+		return html_file;
+	}
+	
+	// 파일 이름 가져오기 (row, 찾는 컬럼, 데이타)
+	function file_list(i, str1, str2) {
+		var t1 = str2.split("},");
+		var t2 = t1[i].replaceAll("}]","").replaceAll("[{","").replaceAll("},{","").split(",");
+		for(var j = 0 ; j < t2.length ; j++){
+			if(t2[j].indexOf(str1) >= 0){
+				return t2[j].split("=")[1];
+			}
+		}
+		return "";
+	}
+
+	function search_disaster_a_onchange() {
+		bbs_searchInfo.set( "search_disaster_a", search_disaster_a.getValue() );
+		comCodeSearch.set( "searchCdKey" , bbs_searchInfo.get( "search_disaster_a" ) );		
+
+		if(!CommonUtil.isNull(search_disaster_a.getValue()))
+	    	getDisasterBComCdInfo_submission.exec();
+		else
+			search_disaster_b.removeAll();
+	};
+
+	function search_disaster_b_onchange() {
+		bbs_searchInfo.set( "search_disaster_b", search_disaster_b.getValue() );
+	};
+
+	function search_amendment_onchange() {
+		bbs_searchInfo.set( "search_amendment", search_amendment.getValue() );
+	};
+	
+	function search_val_v_onkeydown(e) {
+		if(event.keyCode == 13){
+			fn_search();
+		}
+	};
+
+	function sDateValid(){
+		var word = search_start.getValue();
+		if(word == ""){
+		}
+		else if(!(DateUtil.checkDate(word))){
+			alert('날짜형식이 맞지 않습니다.');
+			search_start.setValue('');
+			return false;
+		}
+		
+		bbs_searchInfo.set("search_start", word);
+	}
+			
+	function eDateValid(){
+		var word = search_end.getValue();
+		if(word == ""){
+		}
+		else if(!(DateUtil.checkDate(word))){
+			alert('날짜형식이 맞지 않습니다.');
+			search_end.setValue('');
+			return false;
+		}
+		
+		bbs_searchInfo.set("search_end", word);
+	}
+	
+	function onSearchBtnClick(){
+		bbs_searchInfo.set("pageIndex", 1);
+		fn_search();
+	}
+	
+	function onPrevPageBtnClick(){
+		if(bbs_searchInfo.get("pageIndex") > 1){
+			var pageIndex = Number(bbs_searchInfo.get("pageIndex")) ;
+			bbs_searchInfo.set("pageIndex" , pageIndex - 1);
+			bbs_page.setValue( pageIndex-1 );
+		}
+		getBbsSelect_submission.exec();	
+	}
+	
+	function onNextPageBtnClick(){
+		if(bbs_searchInfo.get("pageIndex") < dm_resultMap.get( "pageSize" )){
+			var pageIndex = Number(bbs_searchInfo.get("pageIndex")) ;
+			bbs_searchInfo.set("pageIndex" , pageIndex + 1);
+			bbs_page.setValue( pageIndex+1 );
+		}
+		getBbsSelect_submission.exec();	
+	}
+
+	function onGoToPageBtnClick(){
+		var pageSize = parseInt(dm_resultMap.get( "pageSize" )) ;
+		var i = parseInt(bbs_page.getValue());
+		if((i<=0)|| (i > pageSize)){
+			alert("해당 페이지는 존재하지 않습니다.");
+			bbs_page.setValue("");
+			return;
+		}
+		
+		bbs_searchInfo.set( "pageIndex",i );
+		getBbsSelect_submission.exec();
+	}
+	
+	$('.navi_link').attr('tabindex','-1');
+	
+</script></div></body></html>
